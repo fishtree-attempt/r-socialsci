@@ -1,123 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://preview.carpentries.org/r-socialsci00-intro.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/00-intro.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsci01-intro-to-r.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/01-intro-to-r.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsci02-starting-with-data.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/02-starting-with-data.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsci03-dplyr-tidyr.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/03-dplyr-tidyr.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsci04-ggplot2.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/04-ggplot2.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsci05-rmarkdown.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/05-rmarkdown.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsci06-json.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/06-json.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciCODE_OF_CONDUCT.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciLICENSE.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciabout.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/about.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialscidata-visualisation-handout.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/aio.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialscidata-wrangling-handout.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/data-visualisation-handout.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialscifigures.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/data-wrangling-handout.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciguide.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/figures.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciindex.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/guide.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciinstructor/00-intro.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/images.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciinstructor/01-intro-to-r.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/index.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciinstructor/02-starting-with-data.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/00-intro.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciinstructor/03-dplyr-tidyr.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/01-intro-to-r.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciinstructor/04-ggplot2.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/02-starting-with-data.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciinstructor/05-rmarkdown.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/03-dplyr-tidyr.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciinstructor/06-json.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/04-ggplot2.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciinstructor/CODE_OF_CONDUCT.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/05-rmarkdown.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciinstructor/LICENSE.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/06-json.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciinstructor/about.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciinstructor/data-visualisation-handout.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciinstructor/data-wrangling-handout.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/about.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciinstructor/figures.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/aio.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciinstructor/guide.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/data-visualisation-handout.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciinstructor/index.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/data-wrangling-handout.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciinstructor/intro-R-handout.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/figures.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciinstructor/profiles.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/guide.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciinstructor/reference.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/images.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciinstructor/setup.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/index.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciinstructor/starting-with-data-handout.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/instructor-notes.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciintro-R-handout.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/intro-R-handout.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialsciprofiles.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/key-points.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialscireference.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/profiles.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialscisetup.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/reference.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/r-socialscistarting-with-data-handout.html</loc>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/setup.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/starting-with-data-handout.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/r-socialsci/intro-R-handout.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/r-socialsci/key-points.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/r-socialsci/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/r-socialsci/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/r-socialsci/setup.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/r-socialsci/starting-with-data-handout.html</loc>
   </url>
 </urlset>
