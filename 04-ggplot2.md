@@ -373,7 +373,7 @@ interviews_plotting %>%
 		    height = 0.2)
 ```
 
-<img src="fig/04-ggplot2-rendered-scatter-challenge-1.png" style="display: block; margin: auto;" />
+<img src="fig/04-ggplot2-rendered-scatter-challenge-1.png" alt="Scatter plot showing positive trend between number of household members and number of items owned." style="display: block; margin: auto;" />
 
 This is not a great way to show this type of data because it is difficult to
 distinguish between villages. What other plot types could help you visualize
