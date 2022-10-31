@@ -13,13 +13,28 @@
     <loc>https://preview.carpentries.org/r-socialsci/03-dplyr-tidyr.html</loc>
   </url>
   <url>
+    <loc>https://preview.carpentries.org/r-socialsci/03-dplyr.html</loc>
+  </url>
+  <url>
     <loc>https://preview.carpentries.org/r-socialsci/04-ggplot2.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/r-socialsci/04-tidyr.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/r-socialsci/05-ggplot2.html</loc>
   </url>
   <url>
     <loc>https://preview.carpentries.org/r-socialsci/05-rmarkdown.html</loc>
   </url>
   <url>
     <loc>https://preview.carpentries.org/r-socialsci/06-json.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/r-socialsci/06-rmarkdown.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/r-socialsci/07-json.html</loc>
   </url>
   <url>
     <loc>https://preview.carpentries.org/r-socialsci/CODE_OF_CONDUCT.html</loc>
@@ -64,13 +79,28 @@
     <loc>https://preview.carpentries.org/r-socialsci/instructor/03-dplyr-tidyr.html</loc>
   </url>
   <url>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/03-dplyr.html</loc>
+  </url>
+  <url>
     <loc>https://preview.carpentries.org/r-socialsci/instructor/04-ggplot2.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/04-tidyr.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/05-ggplot2.html</loc>
   </url>
   <url>
     <loc>https://preview.carpentries.org/r-socialsci/instructor/05-rmarkdown.html</loc>
   </url>
   <url>
     <loc>https://preview.carpentries.org/r-socialsci/instructor/06-json.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/06-rmarkdown.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/r-socialsci/instructor/07-json.html</loc>
   </url>
   <url>
     <loc>https://preview.carpentries.org/r-socialsci/instructor/CODE_OF_CONDUCT.html</loc>
