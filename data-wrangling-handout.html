@@ -287,12 +287,18 @@
 
         
 
-<p>This document contains all of the functions that we have covered thus far in the course. It will be updated every week, after we’ve added new skills. Each function is presented alongside an example of how it is used.</p>
-<p>All of the examples below are in the context of the Palmer Penguins, found <a href="https://allisonhorst.github.io/palmerpenguins/index.html" class="external-link">here (link)</a>.</p>
+<p>This document contains all of the functions that we have covered thus
+far in the course. It will be updated every week, after we’ve added new
+skills. Each function is presented alongside an example of how it is
+used.</p>
+<p>All of the examples below are in the context of the Palmer Penguins,
+found <a href="https://allisonhorst.github.io/palmerpenguins/index.html" class="external-link">here
+(link)</a>.</p>
 <section id="packages"><h2 class="section-heading">Packages<a class="anchor" aria-label="anchor" href="#packages"></a>
 </h2>
 <hr class="half-width"><ul><li>
-<code>library()</code> – loads packages into your <code>R</code> session</li>
+<code>library()</code> – loads packages into your <code>R</code>
+session</li>
 </ul><div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -303,7 +309,9 @@
 </section><section id="inspecting-data"><h2 class="section-heading">Inspecting Data<a class="anchor" aria-label="anchor" href="#inspecting-data"></a>
 </h2>
 <hr class="half-width"><ul><li>
-<code>glimpse()</code> – shows a summary of the dataset, the number of rows and columns, variable names, and the first 10 entries of each variable</li>
+<code>glimpse()</code> – shows a summary of the dataset, the number
+of rows and columns, variable names, and the first 10 entries of each
+variable</li>
 </ul><div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -313,7 +321,8 @@
 </section><section id="working-with-data"><h2 class="section-heading">Working with Data<a class="anchor" aria-label="anchor" href="#working-with-data"></a>
 </h2>
 <hr class="half-width"><ul><li>
-<code>&lt;-</code> – “assignment arrow”, assigns a value (vector, dataframe, single value) to the name of a variable</li>
+<code>&lt;-</code> – “assignment arrow”, assigns a value (vector,
+dataframe, single value) to the name of a variable</li>
 </ul><div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -322,7 +331,8 @@
 <span>  <span class="fu">filter</span><span class="op">(</span><span class="va">year</span> <span class="op">==</span> <span class="fl">2007</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>c()</code> – the “concatenate” function combines inputs to form a vector, the values have to be the same data type.</li>
+<code>c()</code> – the “concatenate” function combines inputs to
+form a vector, the values have to be the same data type.</li>
 </ul><div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -333,7 +343,8 @@
 </section><section id="verbs-of-data-wrangling"><h2 class="section-heading">Verbs of Data Wrangling<a class="anchor" aria-label="anchor" href="#verbs-of-data-wrangling"></a>
 </h2>
 <hr class="half-width"><ul><li>
-<code>select()</code> – selects variables (columns) from a dataframe</li>
+<code>select()</code> – selects variables (columns) from a
+dataframe</li>
 </ul><div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -342,7 +353,9 @@
 <span><span class="fu">select</span><span class="op">(</span><span class="va">species</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>filter()</code> – filters observations (rows) out of / into a dataframe, where the inputs (arguments) are the conditions to be satisfied in the data that are kept</li>
+<code>filter()</code> – filters observations (rows) out of / into a
+dataframe, where the inputs (arguments) are the conditions to be
+satisfied in the data that are kept</li>
 </ul><div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -353,12 +366,21 @@
 <span>       <span class="va">body_mass_g</span> <span class="op">&gt;</span> <span class="fl">3000</span>,</span>
 <span>       <span class="va">year</span> <span class="op">==</span> <span class="fl">2008</span><span class="op">)</span></span></code></pre>
 </div>
-<p><strong>Logical operators:</strong> Filtering for certain observations (e.g. flights from a particular airport) is often of interest in data frames where we might want to examine observations with certain characteristics separately from the rest of the data. To do so, you can use the <code>filter</code> function and a series of <strong>logical operators</strong>. The most commonly used logical operators for data analysis are as follows:</p>
+<p><strong>Logical operators:</strong> Filtering for certain
+observations (e.g. flights from a particular airport) is often of
+interest in data frames where we might want to examine observations with
+certain characteristics separately from the rest of the data. To do so,
+you can use the <code>filter</code> function and a series of
+<strong>logical operators</strong>. The most commonly used logical
+operators for data analysis are as follows:</p>
 <ul><li><p><code>==</code> means “equal to”</p></li>
 <li><p><code>!=</code> means “not equal to”</p></li>
-<li><p><code>&gt;</code> or <code>&lt;</code> means “greater than” or “less than”</p></li>
-<li><p><code>&gt;=</code> or <code>&lt;=</code> means “greater than or equal to” or “less than or equal to”</p></li>
-<li><p><code>mutate()</code> – creates new variables or modifies existing variables</p></li>
+<li><p><code>&gt;</code> or <code>&lt;</code> means “greater than” or
+“less than”</p></li>
+<li><p><code>&gt;=</code> or <code>&lt;=</code> means “greater than or
+equal to” or “less than or equal to”</p></li>
+<li><p><code>mutate()</code> – creates new variables or modifies
+existing variables</p></li>
 </ul><div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -369,7 +391,9 @@
 <span>  <span class="fu">mutate</span><span class="op">(</span>body_mass_kg <span class="op">=</span> <span class="va">body_mass_g</span> <span class="op">/</span> <span class="fl">1000</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>group_by()</code> – groups the dataframe based on levels of a categorical variable, usually used alongside <code>summarize()</code>
+<code>group_by()</code> – groups the dataframe based on levels of a
+categorical variable, usually used alongside
+<code>summarize()</code>
 </li>
 </ul><div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -389,7 +413,9 @@
 <span>  <span class="fu">summarize</span><span class="op">(</span>mean_mass <span class="op">=</span> <span class="fu">mean</span><span class="op">(</span><span class="va">body_mass_g</span><span class="op">)</span><span class="op">)</span>  </span></code></pre>
 </div>
 <ul><li>
-<code>ungroup()</code> – removes the grouping of a dataframe, typically used after group summaries when additional ungrouped operations are required</li>
+<code>ungroup()</code> – removes the grouping of a dataframe,
+typically used after group summaries when additional ungrouped
+operations are required</li>
 </ul><div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -401,7 +427,9 @@
 <span>  <span class="fu">ungroup</span><span class="op">(</span><span class="op">)</span> </span></code></pre>
 </div>
 <ul><li>
-<code>arrange()</code> – orders a dataframe based on the values of a numerical variable, paired with <code>desc()</code> to order in descending order</li>
+<code>arrange()</code> – orders a dataframe based on the values of a
+numerical variable, paired with <code>desc()</code> to order in
+descending order</li>
 </ul><div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -413,7 +441,9 @@
 <span>  <span class="fu">arrange</span><span class="op">(</span><span class="fu">desc</span><span class="op">(</span><span class="va">mean_mass</span><span class="op">)</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>%&gt;%</code> – the “pipe” operator, joins sequences of data wrangling steps together, works with any function that has <code>data =</code> as the first argument</li>
+<code>%&gt;%</code> – the “pipe” operator, joins sequences of data
+wrangling steps together, works with any function that has
+<code>data =</code> as the first argument</li>
 </ul><div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -431,8 +461,10 @@
 </section><section id="other-data-wrangling-tools"><h2 class="section-heading">Other Data Wrangling Tools<a class="anchor" aria-label="anchor" href="#other-data-wrangling-tools"></a>
 </h2>
 <hr class="half-width"><ul><li>
-<code>count()</code> – counts the number of observations (rows) of the different levels of a categorical variable
-<ul><li>can add <code>sort = TRUE</code> to sort the table in descending order (similar to using <code>arrange(desc())</code> )</li>
+<code>count()</code> – counts the number of observations (rows) of
+the different levels of a categorical variable
+<ul><li>can add <code>sort = TRUE</code> to sort the table in descending
+order (similar to using <code>arrange(desc())</code> )</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -442,19 +474,26 @@
 <span><span class="fu">count</span><span class="op">(</span><span class="va">species</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<p><code>mean()</code> – finds the mean of a numerical variable, not resistant to <code>NA</code> values, so either filter out prior or use <code>na.omit = TRUE</code> argument</p>
+<p><code>mean()</code> – finds the mean of a numerical variable, not
+resistant to <code>NA</code> values, so either filter out prior or use
+<code>na.omit = TRUE</code> argument</p>
 <ul><li>Other summary functions include:
 <ul><li>
 <code>var()</code> – find the variance of a numerical variable</li>
 <li>
-<code>sd()</code> – finds the standard deviation of a numerical variable</li>
+<code>sd()</code> – finds the standard deviation of a numerical
+variable</li>
 <li>
-<code>IQR()</code> – find the innerquartile range (Q3 - Q1) of a numerical variable</li>
+<code>IQR()</code> – find the innerquartile range (Q3 - Q1) of a
+numerical variable</li>
 <li>
-<code>median()</code> – finds the median of a numerical variable</li>
+<code>median()</code> – finds the median of a numerical
+variable</li>
 </ul></li>
 </ul></li>
-<li><p><code>is.na()</code> – returns a vector of <code>TRUE</code> and <code>FALSE</code> values corresponding to whether a particular row of a variable was <code>NA</code> (missing)</p></li>
+<li><p><code>is.na()</code> – returns a vector of <code>TRUE</code> and
+<code>FALSE</code> values corresponding to whether a particular row of a
+variable was <code>NA</code> (missing)</p></li>
 </ul><div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -463,7 +502,8 @@
 <span>  <span class="fu">mutate</span><span class="op">(</span>missing_weight <span class="op">=</span> <span class="fu">is.na</span><span class="op">(</span><span class="va">body_mass_g</span><span class="op">)</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>sample_n()</code> – selects <span class="math inline">\(n\)</span> rows from the dataframe, based on the value of <code>size</code> specified</li>
+<code>sample_n()</code> – selects <span class="math inline">\(n\)</span> rows from the dataframe, based on the
+value of <code>size</code> specified</li>
 </ul><div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -472,8 +512,10 @@
 <span>  <span class="fu">sample_n</span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>replace_na()</code> – replaces NA values with the value specified
-<ul><li>The values to be replaced must be passed to the function (input) as a <code>list()</code> object.</li>
+<code>replace_na()</code> – replaces NA values with the value
+specified
+<ul><li>The values to be replaced must be passed to the function (input) as
+a <code>list()</code> object.</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -485,12 +527,16 @@
 <span>  <span class="fu">glimpse</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<p><code>separate_rows()</code> – separates a variable with multiple values based on the delimiter specified.</p>
-<ul><li>Variables whose entries are stored as a list with commas or semicolons are great candidates for this function!</li>
+<p><code>separate_rows()</code> – separates a variable with multiple
+values based on the delimiter specified.</p>
+<ul><li>Variables whose entries are stored as a list with commas or
+semicolons are great candidates for this function!</li>
 </ul></li>
 <li>
 <p><code>rowSums()</code> – forms row sums for numeric variables</p>
-<ul><li>Note: In the lesson <code>rowSums()</code> was used on a <code>logical</code> variable, because logical values can be numerically represented as 0 (FALSE) and 1 (TRUE)</li>
+<ul><li>Note: In the lesson <code>rowSums()</code> was used on a
+<code>logical</code> variable, because logical values can be numerically
+represented as 0 (FALSE) and 1 (TRUE)</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -502,13 +548,17 @@
 </section><section id="pivoting-dataframes"><h2 class="section-heading">Pivoting Dataframes<a class="anchor" aria-label="anchor" href="#pivoting-dataframes"></a>
 </h2>
 <hr class="half-width"><ul><li>
-<code>pivot_wider()</code> – transforms a dataframe from long to wide format
+<code>pivot_wider()</code> – transforms a dataframe from long to
+wide format
 <ul><li>takes three principal arguments:
 <ol style="list-style-type: decimal"><li>the data</li>
-<li>the <em>names_from</em> column variable whose values will become new column names</li>
-<li>the <em>values_from</em> column variable whose values will fill the new column variables.</li>
+<li>the <em>names_from</em> column variable whose values will become new
+column names</li>
+<li>the <em>values_from</em> column variable whose values will fill the
+new column variables.</li>
 </ol></li>
-<li>Further arguments include <code>values_fill</code> which, if set, fills in missing values with the value provided.</li>
+<li>Further arguments include <code>values_fill</code> which, if set,
+fills in missing values with the value provided.</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -523,13 +573,17 @@
 <span><span class="fu">glimpse</span><span class="op">(</span><span class="va">wide</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>pivot_longer()</code> – transforms a dataframe from wide to long format
+<code>pivot_longer()</code> – transforms a dataframe from wide to
+long format
 <ul><li>takes four principal arguments:</li>
 </ul><ol style="list-style-type: decimal"><li>the data</li>
 <li>
-<em>cols</em> are the names of the columns we use to fill the a new values variable (or to drop).</li>
-<li>the <em>names_to</em> column variable we wish to create from the <em>cols</em> provided.</li>
-<li>the <em>values_to</em> column variable we wish to create and fill with values associated with the <em>cols</em> provided.</li>
+<em>cols</em> are the names of the columns we use to fill the a new
+values variable (or to drop).</li>
+<li>the <em>names_to</em> column variable we wish to create from the
+<em>cols</em> provided.</li>
+<li>the <em>values_to</em> column variable we wish to create and fill
+with values associated with the <em>cols</em> provided.</li>
 </ol></li>
 </ul><div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -543,7 +597,8 @@
 </section><section id="extracting-data"><h2 class="section-heading">Extracting Data<a class="anchor" aria-label="anchor" href="#extracting-data"></a>
 </h2>
 <hr class="half-width"><ul><li>
-<code>write_csv()</code> – writes a dataframe to a csv file, output into the file path specified</li>
+<code>write_csv()</code> – writes a dataframe to a csv file, output
+into the file path specified</li>
 </ul><div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>

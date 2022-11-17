@@ -287,12 +287,19 @@
 
         
 
-<p>This document contains all of the functions that we have covered thus far in the course. It will be updated every week, after we’ve added new skills. Each function is presented alongside an example of how it is used.</p>
-<p>All of the examples below are in the context of the Palmer Penguins, found <a href="https://allisonhorst.github.io/palmerpenguins/index.html" class="external-link">here (link)</a>.</p>
+<p>This document contains all of the functions that we have covered thus
+far in the course. It will be updated every week, after we’ve added new
+skills. Each function is presented alongside an example of how it is
+used.</p>
+<p>All of the examples below are in the context of the Palmer Penguins,
+found <a href="https://allisonhorst.github.io/palmerpenguins/index.html" class="external-link">here
+(link)</a>.</p>
 <section id="foundations-of-ggplot"><h2 class="section-heading">Foundations of <code>ggplot()</code><a class="anchor" aria-label="anchor" href="#foundations-of-ggplot"></a>
 </h2>
 <hr class="half-width"><ul><li>
-<code>ggplot()</code> – a function to create the shell of a visualization, where specific variables are mapped to different aspects of the plot</li>
+<code>ggplot()</code> – a function to create the shell of a
+visualization, where specific variables are mapped to different aspects
+of the plot</li>
 </ul><div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -301,7 +308,10 @@
 <span>  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">bill_depth_mm</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<p><code>aes()</code> – aesthetics that can be used when creating a <code>ggplot()</code>, where the aesthetics can either be hard coded (e.g. <code>color = "blue"</code>) or associated with a variable (e.g. <code>color = sex</code>).</p>
+<p><code>aes()</code> – aesthetics that can be used when creating a
+<code>ggplot()</code>, where the aesthetics can either be hard coded
+(e.g. <code>color = "blue"</code>) or associated with a variable
+(e.g. <code>color = sex</code>).</p>
 <ul><li>The following are the aesthetic options for <em>most</em> plots:
 <ul><li><code>x</code></li>
 <li><code>y</code></li>
@@ -312,14 +322,22 @@
 <li>
 <code>fill</code> – fills with color</li>
 <li>
-<code>group</code> – used with categorical variables, similar to color</li>
+<code>group</code> – used with categorical variables, similar to
+color</li>
 </ul></li>
 </ul></li>
 <li>
-<p><strong><code>+</code></strong> – an important aspect creating a <code>ggplot()</code> is to note that the <code>geom_XXX()</code> function is separated from the <code>ggplot()</code> function with a plus sign, <code>+</code>.</p>
+<p><strong><code>+</code></strong> – an important aspect creating a
+<code>ggplot()</code> is to note that the <code>geom_XXX()</code>
+function is separated from the <code>ggplot()</code> function with a
+plus sign, <code>+</code>.</p>
 <ul><li>
-<code>ggplot()</code> plots are constructed in series of layers, where the plus sign separates these layers.</li>
-<li>Generally, the <code>+</code> sign can be thought of as the end of a line, so you should always hit enter/return after it. While it is not mandatory to move to the next line for each layer, doing so makes the code a lot easier to organize and read.</li>
+<code>ggplot()</code> plots are constructed in series of layers,
+where the plus sign separates these layers.</li>
+<li>Generally, the <code>+</code> sign can be thought of as the end of a
+line, so you should always hit enter/return after it. While it is not
+mandatory to move to the next line for each layer, doing so makes the
+code a lot easier to organize and read.</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -332,8 +350,11 @@
 </section><section id="geometric-objects-to-visualize-the-data"><h2 class="section-heading">Geometric Objects to Visualize the Data<a class="anchor" aria-label="anchor" href="#geometric-objects-to-visualize-the-data"></a>
 </h2>
 <hr class="half-width"><ul><li>
-<code>geom_histogram( )</code> – adds a histogram to the plot, where the observations are binned into ranges of values and then frequencies of observations are plotted on the y-axis
-<ul><li>You can specify the number of bins you want with the <code>bins</code> argument</li>
+<code>geom_histogram( )</code> – adds a histogram to the plot, where
+the observations are binned into ranges of values and then frequencies
+of observations are plotted on the y-axis
+<ul><li>You can specify the number of bins you want with the
+<code>bins</code> argument</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -344,9 +365,16 @@
 <span>  <span class="fu">geom_histogram</span><span class="op">(</span>bins <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>geom_boxplot( )</code> – adds a boxplot to the plot, where observations are aggregated (summarized), the min, Q1, median, Q3, and maximum are plotted as the box and whiskers, and “outliers” are plotted as points.
-<ul><li>You can plot a vertical boxplot by specifying the <code>x</code> variable, or a horizontal boxplot by specifying the <code>y</code> variable.</li>
-<li>Note: the min and max may not be included in the whiskers, if they are deemed to be “outliers” based on the <span class="math inline">\(1.5 \\times \\text{IQR}\)</span> rule.</li>
+<code>geom_boxplot( )</code> – adds a boxplot to the plot, where
+observations are aggregated (summarized), the min, Q1, median, Q3, and
+maximum are plotted as the box and whiskers, and “outliers” are plotted
+as points.
+<ul><li>You can plot a vertical boxplot by specifying the <code>x</code>
+variable, or a horizontal boxplot by specifying the <code>y</code>
+variable.</li>
+<li>Note: the min and max may not be included in the whiskers, if they
+are deemed to be “outliers” based on the <span class="math inline">\(1.5
+\\times \\text{IQR}\)</span> rule.</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -363,8 +391,12 @@
 <span>  <span class="fu">geom_boxplot</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>geom_density()</code> – adds a density curve to the plot, where the probability density is plotted on the y-axis (so the density curve has a total area of one).
-<ul><li>By default this creates a density curve without shading. By specifying a color in the <code>fill</code> argument, the density curve is shaded.</li>
+<code>geom_density()</code> – adds a density curve to the plot,
+where the probability density is plotted on the y-axis (so the density
+curve has a total area of one).
+<ul><li>By default this creates a density curve without shading. By
+specifying a color in the <code>fill</code> argument, the density curve
+is shaded.</li>
 <li>Can be thought of as the “one group” violin plot!</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb5">
@@ -376,9 +408,14 @@
 <span>  <span class="fu">geom_density</span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"tomato"</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>geom_violin()</code> – plots violins for each level of a categorical variable
-<ul><li>Can be thought of as a hybrid mix of <code>geom_boxplot()</code> and <code>geom_density()</code>, as the density is displayed, but it is reflected to provide a plot similar in nature to a boxplot.</li>
-<li>To obtain violins stacked vertically, declare the categorical variable as <code>y</code>. To obtain side-by-side violins, declare the categorical variable as <code>x</code>.</li>
+<code>geom_violin()</code> – plots violins for each level of a
+categorical variable
+<ul><li>Can be thought of as a hybrid mix of <code>geom_boxplot()</code> and
+<code>geom_density()</code>, as the density is displayed, but it is
+reflected to provide a plot similar in nature to a boxplot.</li>
+<li>To obtain violins stacked vertically, declare the categorical
+variable as <code>y</code>. To obtain side-by-side violins, declare the
+categorical variable as <code>x</code>.</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -395,10 +432,16 @@
 <span>  <span class="fu">geom_violin</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>geom_bar()</code> – creates a barchart of a categorical variable
-<ul><li>Can produce stacked barcharts by specifying a variable as the <code>fill</code> aesthetic.</li>
-<li>Can change from stacked barchart to a side-by-side barchart by specifying <code>position = "dodge"</code>.</li>
-<li>If your data are already in counts (e.g. output from <code>count()</code>), then you can specify the <code>stat = "identity"</code> argument inside <code>geom_bar()</code>.</li>
+<code>geom_bar()</code> – creates a barchart of a categorical
+variable
+<ul><li>Can produce stacked barcharts by specifying a variable as the
+<code>fill</code> aesthetic.</li>
+<li>Can change from stacked barchart to a side-by-side barchart by
+specifying <code>position = "dodge"</code>.</li>
+<li>If your data are already in counts (e.g. output from
+<code>count()</code>), then you can specify the
+<code>stat = "identity"</code> argument inside
+<code>geom_bar()</code>.</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -424,9 +467,13 @@
 <span>           position <span class="op">=</span> <span class="st">"dodge"</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>geom_point()</code> – plots each observation as an (x, y) point, used to create scatterplots
-<ul><li>Can use <code>alpha</code> to increase the transparency of the points, to reduce overplotting.</li>
-<li>Can specify <code>aes</code>thetics inside of <code>geom_point()</code> for local aesthetics (point level) or inside of <code>ggplot()</code> for global aesthetics (plot level)</li>
+<code>geom_point()</code> – plots each observation as an (x, y)
+point, used to create scatterplots
+<ul><li>Can use <code>alpha</code> to increase the transparency of the
+points, to reduce overplotting.</li>
+<li>Can specify <code>aes</code>thetics inside of
+<code>geom_point()</code> for local aesthetics (point level) or inside
+of <code>ggplot()</code> for global aesthetics (plot level)</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -437,9 +484,12 @@
 <span>  <span class="fu">geom_point</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>geom_jitter()</code> – plots each observation as an (x, y) point and adds a small amount of jitter around the point
-<ul><li>Useful so that we can see each point in the locations where there are overlapping points.</li>
-<li>Can specify the <code>width</code> and <code>height</code> of the jittering using the optional arguments.</li>
+<code>geom_jitter()</code> – plots each observation as an (x, y)
+point and adds a small amount of jitter around the point
+<ul><li>Useful so that we can see each point in the locations where there
+are overlapping points.</li>
+<li>Can specify the <code>width</code> and <code>height</code> of the
+jittering using the optional arguments.</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -451,9 +501,12 @@
 <span>  <span class="fu">geom_jitter</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>color <span class="op">=</span> <span class="va">sex</span><span class="op">)</span>, width <span class="op">=</span> <span class="fl">0.25</span>, height <span class="op">=</span> <span class="fl">0.25</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>geom_smooth()</code> – plots a line over a set of points, draws the readers eye to a specific trend
-<ul><li>The methods we will use are “lm” for a linear model (straight line), and “loess” for a wiggly line</li>
-<li>By default, the smoother gives you gray SE bars, to remove these add <code>se = FALSE</code>
+<code>geom_smooth()</code> – plots a line over a set of points,
+draws the readers eye to a specific trend
+<ul><li>The methods we will use are “lm” for a linear model (straight line),
+and “loess” for a wiggly line</li>
+<li>By default, the smoother gives you gray SE bars, to remove these add
+<code>se = FALSE</code>
 </li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb10">
@@ -466,10 +519,13 @@
 <span>  <span class="fu">geom_smooth</span><span class="op">(</span>method <span class="op">=</span> <span class="st">"lm"</span><span class="op">)</span> </span></code></pre>
 </div>
 <ul><li>
-<code>facet_wrap()</code> – creates subplots of your original plot, based on the levels of the variable you input
+<code>facet_wrap()</code> – creates subplots of your original plot,
+based on the levels of the variable you input
 <ul><li>To facet by one variable, use <code>~variable</code>.</li>
-<li>To facet by two variables, use <code>variable1 ~ variable2</code>.</li>
-<li>If you prefer for your facets to be organized in rows or columns, use the <code>nrow</code> and/or <code>ncol</code> arguments.</li>
+<li>To facet by two variables, use
+<code>variable1 ~ variable2</code>.</li>
+<li>If you prefer for your facets to be organized in rows or columns,
+use the <code>nrow</code> and/or <code>ncol</code> arguments.</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -484,7 +540,8 @@
 </section><section id="plot-characteristics"><h2 class="section-heading">Plot Characteristics<a class="anchor" aria-label="anchor" href="#plot-characteristics"></a>
 </h2>
 <hr class="half-width"><ul><li>
-<code>labs()</code> – specifies the plot labels, possible labels are: x, y, color, fill, title, and subtitle</li>
+<code>labs()</code> – specifies the plot labels, possible labels
+are: x, y, color, fill, title, and subtitle</li>
 </ul><div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -498,9 +555,12 @@
 <span>       color <span class="op">=</span> <span class="st">"Penguin Species"</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>theme_bw()</code> – changes the plotting background to the classic dark-on-light ggplot2 theme.
-<ul><li>This theme may work better for presentations displayed with a projector.</li>
-<li>Other theme options are <code>theme_minimal()</code>, <code>theme_light()</code>, and <code>theme_void()</code>.</li>
+<code>theme_bw()</code> – changes the plotting background to the
+classic dark-on-light ggplot2 theme.
+<ul><li>This theme may work better for presentations displayed with a
+projector.</li>
+<li>Other theme options are <code>theme_minimal()</code>,
+<code>theme_light()</code>, and <code>theme_void()</code>.</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -519,16 +579,22 @@
 <code>theme()</code> –
 <ul><li>Possible options are:
 <ul><li>
-<code>panel.grid</code> – controls the grid lines (<code>panel.grid = element_blank()</code> removes grid lines)</li>
+<code>panel.grid</code> – controls the grid lines
+(<code>panel.grid = element_blank()</code> removes grid lines)</li>
 <li>
-<code>text</code> – specifies font size for the entire plot (e.g. <code>text = element_text(size = 16)</code>
+<code>text</code> – specifies font size for the entire plot (e.g.
+<code>text = element_text(size = 16)</code>
 </li>
 <li>
-<code>axis.text.x</code> – specifies the font size for the x-axis text</li>
+<code>axis.text.x</code> – specifies the font size for the x-axis
+text</li>
 <li>
-<code>axis.text.y</code> – specifies the font size for the y-axis text</li>
+<code>axis.text.y</code> – specifies the font size for the y-axis
+text</li>
 <li>
-<code>plot.title</code> – specifies aspects of the plot title, can use <code>plot.title = element_text(hjust = 0.5)</code> to centre the title</li>
+<code>plot.title</code> – specifies aspects of the plot title, can
+use <code>plot.title = element_text(hjust = 0.5)</code> to centre the
+title</li>
 </ul></li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb14">
@@ -551,7 +617,8 @@
 <hr class="half-width"><ul><li>
 <code>ggsave()</code> – convenient function for saving a plot
 <ul><li>Unless specified, defaults to the last plot that was made.</li>
-<li>Uses the size of the current graphics device to determine the size of the plot.</li>
+<li>Uses the size of the current graphics device to determine the size
+of the plot.</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>

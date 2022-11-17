@@ -312,7 +312,8 @@
 <h3 class="card-title">Questions</h3>
 <ul><li>How can I select specific rows and/or columns from a dataframe?</li>
 <li>How can I combine multiple commands into a single command?</li>
-<li>How can I create new columns or remove existing columns from a dataframe?</li>
+<li>How can I create new columns or remove existing columns from a
+dataframe?</li>
 </ul></div>
 </div>
 </div>
@@ -320,20 +321,35 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Describe the purpose of an R package and the <strong><code>dplyr</code></strong> package.</li>
-<li>Select certain columns in a dataframe with the <strong><code>dplyr</code></strong> function <code>select</code>.</li>
-<li>Select certain rows in a dataframe according to filtering conditions with the <strong><code>dplyr</code></strong> function <code>filter</code>.</li>
-<li>Link the output of one <strong><code>dplyr</code></strong> function to the input of another function with the ‘pipe’ operator <code>%&gt;%</code>.</li>
-<li>Add new columns to a dataframe that are functions of existing columns with <code>mutate</code>.</li>
+<ul><li>Describe the purpose of an R package and the
+<strong><code>dplyr</code></strong> package.</li>
+<li>Select certain columns in a dataframe with the
+<strong><code>dplyr</code></strong> function <code>select</code>.</li>
+<li>Select certain rows in a dataframe according to filtering conditions
+with the <strong><code>dplyr</code></strong> function
+<code>filter</code>.</li>
+<li>Link the output of one <strong><code>dplyr</code></strong> function
+to the input of another function with the ‘pipe’ operator
+<code>%&gt;%</code>.</li>
+<li>Add new columns to a dataframe that are functions of existing
+columns with <code>mutate</code>.</li>
 <li>Use the split-apply-combine concept for data analysis.</li>
-<li>Use <code>summarize</code>, <code>group_by</code>, and <code>count</code> to split a dataframe into groups of observations, apply a summary statistics for each group, and then combine the results.</li>
+<li>Use <code>summarize</code>, <code>group_by</code>, and
+<code>count</code> to split a dataframe into groups of observations,
+apply a summary statistics for each group, and then combine the
+results.</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<p><strong><code>dplyr</code></strong> is a package for making tabular data wrangling easier by using a limited set of functions that can be combined to extract and summarize insights from your data.</p>
-<p>Like <strong><code>readr</code></strong>, <strong><code>dplyr</code></strong> is a part of the tidyverse. These packages were loaded in R’s memory when we called <code><a href="https://tidyverse.tidyverse.org" class="external-link">library(tidyverse)</a></code> earlier.</p>
+<p><strong><code>dplyr</code></strong> is a package for making tabular
+data wrangling easier by using a limited set of functions that can be
+combined to extract and summarize insights from your data.</p>
+<p>Like <strong><code>readr</code></strong>,
+<strong><code>dplyr</code></strong> is a part of the tidyverse. These
+packages were loaded in R’s memory when we called
+<code><a href="https://tidyverse.tidyverse.org" class="external-link">library(tidyverse)</a></code> earlier.</p>
 <div id="callout1" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -342,16 +358,39 @@
 <h3 class="callout-title">Note<a class="anchor" aria-label="anchor" href="#callout1"></a>
 </h3>
 <div class="callout-content">
-<p>The packages in the tidyverse, namely <strong><code>dplyr</code></strong>, <strong><code>tidyr</code></strong> and <strong><code>ggplot2</code></strong> accept both the British (e.g. <em>summarise</em>) and American (e.g. <em>summarize</em>) spelling variants of different function and option names. For this lesson, we utilize the American spellings of different functions; however, feel free to use the regional variant for where you are teaching.</p>
+<p>The packages in the tidyverse, namely
+<strong><code>dplyr</code></strong>, <strong><code>tidyr</code></strong>
+and <strong><code>ggplot2</code></strong> accept both the British
+(e.g. <em>summarise</em>) and American (e.g. <em>summarize</em>)
+spelling variants of different function and option names. For this
+lesson, we utilize the American spellings of different functions;
+however, feel free to use the regional variant for where you are
+teaching.</p>
 </div>
 </div>
 </div>
 <section id="what-is-an-r-package"><h2 class="section-heading">What is an R package?<a class="anchor" aria-label="anchor" href="#what-is-an-r-package"></a>
 </h2>
-<hr class="half-width"><p>The package <strong><code>dplyr</code></strong> provides easy tools for the most common data wrangling tasks. It is built to work directly with dataframes, with many common tasks optimized by being written in a compiled language (C++) (not all R packages are written in R!).</p>
-<p>There are also packages available for a wide range of tasks including building plots (<strong><code>ggplot2</code></strong>, which we’ll see later), downloading data from the NCBI database, or performing statistical analysis on your data set. Many packages such as these are housed on, and downloadable from, the <strong>C</strong>omprehensive <strong>R</strong> <strong>A</strong>rchive <strong>N</strong>etwork (CRAN) using <code>install.packages</code>. This function makes the package accessible by your R installation with the command <code>library()</code>, as you did with <code>tidyverse</code> earlier.</p>
-<p>To easily access the documentation for a package within R or RStudio, use <code><a href="https://rdrr.io/pkg/package_name/man" class="external-link">help(package = "package_name")</a></code>.</p>
-<p>To learn more about <strong><code>dplyr</code></strong> after the workshop, you may want to check out this <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf" class="external-link">handy data transformation with <strong><code>dplyr</code></strong> cheatsheet</a>.</p>
+<hr class="half-width"><p>The package <strong><code>dplyr</code></strong> provides easy tools
+for the most common data wrangling tasks. It is built to work directly
+with dataframes, with many common tasks optimized by being written in a
+compiled language (C++) (not all R packages are written in R!).</p>
+<p>There are also packages available for a wide range of tasks including
+building plots (<strong><code>ggplot2</code></strong>, which we’ll see
+later), downloading data from the NCBI database, or performing
+statistical analysis on your data set. Many packages such as these are
+housed on, and downloadable from, the <strong>C</strong>omprehensive
+<strong>R</strong> <strong>A</strong>rchive <strong>N</strong>etwork
+(CRAN) using <code>install.packages</code>. This function makes the
+package accessible by your R installation with the command
+<code>library()</code>, as you did with <code>tidyverse</code>
+earlier.</p>
+<p>To easily access the documentation for a package within R or RStudio,
+use <code><a href="https://rdrr.io/pkg/package_name/man" class="external-link">help(package = "package_name")</a></code>.</p>
+<p>To learn more about <strong><code>dplyr</code></strong> after the
+workshop, you may want to check out this <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf" class="external-link">handy
+data transformation with <strong><code>dplyr</code></strong>
+cheatsheet</a>.</p>
 <div id="callout2" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -360,13 +399,19 @@
 <h3 class="callout-title">Note<a class="anchor" aria-label="anchor" href="#callout2"></a>
 </h3>
 <div class="callout-content">
-<p>There are alternatives to the <code>tidyverse</code> packages for data wrangling, including the package <a href="https://rdatatable.gitlab.io/data.table/" class="external-link"><code>data.table</code></a>. See this <a href="https://mgimond.github.io/rug_2019_12/Index.html" class="external-link">comparison</a> for example to get a sense of the differences between using <code>base</code>, <code>tidyverse</code>, and <code>data.table</code>.</p>
+<p>There are alternatives to the <code>tidyverse</code> packages for
+data wrangling, including the package <a href="https://rdatatable.gitlab.io/data.table/" class="external-link"><code>data.table</code></a>.
+See this <a href="https://mgimond.github.io/rug_2019_12/Index.html" class="external-link">comparison</a>
+for example to get a sense of the differences between using
+<code>base</code>, <code>tidyverse</code>, and
+<code>data.table</code>.</p>
 </div>
 </div>
 </div>
 </section><section id="learning-dplyr"><h2 class="section-heading">Learning <strong><code>dplyr</code></strong><a class="anchor" aria-label="anchor" href="#learning-dplyr"></a>
 </h2>
-<hr class="half-width"><p>To make sure everyone will use the same dataset for this lesson, we’ll read again the SAFI dataset that we downloaded earlier.</p>
+<hr class="half-width"><p>To make sure everyone will use the same dataset for this lesson,
+we’ll read again the SAFI dataset that we downloaded earlier.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -383,22 +428,33 @@
 <span><span class="co">## preview the data</span></span>
 <span><span class="co"># view(interviews)</span></span></code></pre>
 </div>
-<p>We’re going to learn some of the most common <strong><code>dplyr</code></strong> functions:</p>
+<p>We’re going to learn some of the most common
+<strong><code>dplyr</code></strong> functions:</p>
 <ul><li>
 <code>select()</code>: subset columns</li>
 <li>
 <code>filter()</code>: subset rows on conditions</li>
 <li>
-<code>mutate()</code>: create new columns by using information from other columns</li>
+<code>mutate()</code>: create new columns by using information from
+other columns</li>
 <li>
-<code>group_by()</code> and <code>summarize()</code>: create summary statistics on grouped data</li>
+<code>group_by()</code> and <code>summarize()</code>: create summary
+statistics on grouped data</li>
 <li>
 <code>arrange()</code>: sort results</li>
 <li>
 <code>count()</code>: count discrete values</li>
 </ul></section><section id="selecting-columns-and-filtering-rows"><h2 class="section-heading">Selecting columns and filtering rows<a class="anchor" aria-label="anchor" href="#selecting-columns-and-filtering-rows"></a>
 </h2>
-<hr class="half-width"><p>To select columns of a dataframe, use <code>select()</code>. The first argument to this function is the dataframe (<code>interviews</code>), and the subsequent arguments are the columns to keep, separated by commas. Alternatively, if you are selecting columns adjacent to each other, you can use a <code>:</code> to select a range of columns, read as “select columns from ___ to ___.” You may have done something similar in the past using subsetting. <code>select()</code> is essentially doing the same thing as subsetting, using a package (<code>dplyr</code>) instead of R’s base functions.</p>
+<hr class="half-width"><p>To select columns of a dataframe, use <code>select()</code>. The
+first argument to this function is the dataframe
+(<code>interviews</code>), and the subsequent arguments are the columns
+to keep, separated by commas. Alternatively, if you are selecting
+columns adjacent to each other, you can use a <code>:</code> to select a
+range of columns, read as “select columns from ___ to ___.” You may have
+done something similar in the past using subsetting.
+<code>select()</code> is essentially doing the same thing as subsetting,
+using a package (<code>dplyr</code>) instead of R’s base functions.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -410,7 +466,10 @@
 <span><span class="co"># to select a series of connected columns</span></span>
 <span><span class="fu">select</span><span class="op">(</span><span class="va">interviews</span>, <span class="va">village</span><span class="op">:</span><span class="va">respondent_wall_type</span><span class="op">)</span></span></code></pre>
 </div>
-<p>To choose rows based on specific criteria, we can use the <code>filter()</code> function. The argument after the dataframe is the condition we want our final dataframe to adhere to (e.g. village name is Chirodzo):</p>
+<p>To choose rows based on specific criteria, we can use the
+<code>filter()</code> function. The argument after the dataframe is the
+condition we want our final dataframe to adhere to (e.g. village name is
+Chirodzo):</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -439,7 +498,13 @@
 #   instanceID &lt;chr&gt;, and abbreviated variable names ¹​respondent_wall_type,
 #   ²​memb_assoc</code></pre>
 </div>
-<p>We can also specify multiple conditions within the <code>filter()</code> function. We can combine conditions using either “and” or “or” statements. In an “and” statement, an observation (row) must meet <strong>every</strong> criteria to be included in the resulting dataframe. To form “and” statements within dplyr, we can pass our desired conditions as arguments in the <code>filter()</code> function, separated by commas:</p>
+<p>We can also specify multiple conditions within the
+<code>filter()</code> function. We can combine conditions using either
+“and” or “or” statements. In an “and” statement, an observation (row)
+must meet <strong>every</strong> criteria to be included in the
+resulting dataframe. To form “and” statements within dplyr, we can pass
+our desired conditions as arguments in the <code>filter()</code>
+function, separated by commas:</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -471,7 +536,8 @@
 #   instanceID &lt;chr&gt;, and abbreviated variable names ¹​respondent_wall_type,
 #   ²​memb_assoc</code></pre>
 </div>
-<p>We can also form “and” statements with the <code>&amp;</code> operator instead of commas:</p>
+<p>We can also form “and” statements with the <code>&amp;</code>
+operator instead of commas:</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -503,7 +569,9 @@
 #   instanceID &lt;chr&gt;, and abbreviated variable names ¹​respondent_wall_type,
 #   ²​memb_assoc</code></pre>
 </div>
-<p>In an “or” statement, observations must meet <em>at least one</em> of the specified conditions. To form “or” statements we use the logical operator for “or,” which is the vertical bar (|):</p>
+<p>In an “or” statement, observations must meet <em>at least one</em> of
+the specified conditions. To form “or” statements we use the logical
+operator for “or,” which is the vertical bar (|):</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -535,8 +603,11 @@
 </div>
 </section><section id="pipes"><h2 class="section-heading">Pipes<a class="anchor" aria-label="anchor" href="#pipes"></a>
 </h2>
-<hr class="half-width"><p>What if you want to select and filter at the same time? There are three ways to do this: use intermediate steps, nested functions, or pipes.</p>
-<p>With intermediate steps, you create a temporary dataframe and use that as input to the next function, like this:</p>
+<hr class="half-width"><p>What if you want to select and filter at the same time? There are
+three ways to do this: use intermediate steps, nested functions, or
+pipes.</p>
+<p>With intermediate steps, you create a temporary dataframe and use
+that as input to the next function, like this:</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -544,8 +615,11 @@
 <code class="sourceCode R"><span><span class="va">interviews2</span> <span class="op">&lt;-</span> <span class="fu">filter</span><span class="op">(</span><span class="va">interviews</span>, <span class="va">village</span> <span class="op">==</span> <span class="st">"Chirodzo"</span><span class="op">)</span></span>
 <span><span class="va">interviews_ch</span> <span class="op">&lt;-</span> <span class="fu">select</span><span class="op">(</span><span class="va">interviews2</span>, <span class="va">village</span><span class="op">:</span><span class="va">respondent_wall_type</span><span class="op">)</span></span></code></pre>
 </div>
-<p>This is readable, but can clutter up your workspace with lots of objects that you have to name individually. With multiple steps, that can be hard to keep track of.</p>
-<p>You can also nest functions (i.e. one function inside of another), like this:</p>
+<p>This is readable, but can clutter up your workspace with lots of
+objects that you have to name individually. With multiple steps, that
+can be hard to keep track of.</p>
+<p>You can also nest functions (i.e. one function inside of another),
+like this:</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -553,10 +627,20 @@
 <code class="sourceCode R"><span><span class="va">interviews_ch</span> <span class="op">&lt;-</span> <span class="fu">select</span><span class="op">(</span><span class="fu">filter</span><span class="op">(</span><span class="va">interviews</span>, <span class="va">village</span> <span class="op">==</span> <span class="st">"Chirodzo"</span><span class="op">)</span>,</span>
 <span>                         <span class="va">village</span><span class="op">:</span><span class="va">respondent_wall_type</span><span class="op">)</span></span></code></pre>
 </div>
-<p>This is handy, but can be difficult to read if too many functions are nested, as R evaluates the expression from the inside out (in this case, filtering, then selecting).</p>
-<p>The last option, <em>pipes</em>, are a recent addition to R. Pipes let you take the output of one function and send it directly to the next, which is useful when you need to do many things to the same dataset. Pipes in R look like <code>%&gt;%</code> and are made available via the <strong><code>magrittr</code></strong> package, installed automatically with <strong><code>dplyr</code></strong>. If you use RStudio, you can type the pipe with:</p>
+<p>This is handy, but can be difficult to read if too many functions are
+nested, as R evaluates the expression from the inside out (in this case,
+filtering, then selecting).</p>
+<p>The last option, <em>pipes</em>, are a recent addition to R. Pipes
+let you take the output of one function and send it directly to the
+next, which is useful when you need to do many things to the same
+dataset. Pipes in R look like <code>%&gt;%</code> and are made available
+via the <strong><code>magrittr</code></strong> package, installed
+automatically with <strong><code>dplyr</code></strong>. If you use
+RStudio, you can type the pipe with:</p>
 <ul><li>
-<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd> if you have a PC or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd> if you have a Mac.</li>
+<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd> if you have a PC
+or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd> if you have a
+Mac.</li>
 </ul><div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -583,9 +667,25 @@
 10 Chirodzo 2016-11-17 00:00:00         9         7 muddaub             
 # … with 29 more rows</code></pre>
 </div>
-<p>In the above code, we use the pipe to send the <code>interviews</code> dataset first through <code>filter()</code> to keep rows where <code>village</code> is “Chirodzo”, then through <code>select()</code> to keep only the columns from <code>village</code> to <code>respondent_wall_type</code>. Since <code>%&gt;%</code> takes the object on its left and passes it as the first argument to the function on its right, we don’t need to explicitly include the dataframe as an argument to the <code>filter()</code> and <code>select()</code> functions any more.</p>
-<p>Some may find it helpful to read the pipe like the word “then”. For instance, in the above example, we take the dataframe <code>interviews</code>, <em>then</em> we <code>filter</code> for rows with <code>village == "Chirodzo"</code>, <em>then</em> we <code>select</code> columns <code>village:respondent_wall_type</code>. The <strong><code>dplyr</code></strong> functions by themselves are somewhat simple, but by combining them into linear workflows with the pipe, we can accomplish more complex data wrangling operations.</p>
-<p>If we want to create a new object with this smaller version of the data, we can assign it a new name:</p>
+<p>In the above code, we use the pipe to send the
+<code>interviews</code> dataset first through <code>filter()</code> to
+keep rows where <code>village</code> is “Chirodzo”, then through
+<code>select()</code> to keep only the columns from <code>village</code>
+to <code>respondent_wall_type</code>. Since <code>%&gt;%</code> takes
+the object on its left and passes it as the first argument to the
+function on its right, we don’t need to explicitly include the dataframe
+as an argument to the <code>filter()</code> and <code>select()</code>
+functions any more.</p>
+<p>Some may find it helpful to read the pipe like the word “then”. For
+instance, in the above example, we take the dataframe
+<code>interviews</code>, <em>then</em> we <code>filter</code> for rows
+with <code>village == "Chirodzo"</code>, <em>then</em> we
+<code>select</code> columns <code>village:respondent_wall_type</code>.
+The <strong><code>dplyr</code></strong> functions by themselves are
+somewhat simple, but by combining them into linear workflows with the
+pipe, we can accomplish more complex data wrangling operations.</p>
+<p>If we want to create a new object with this smaller version of the
+data, we can assign it a new name:</p>
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -614,7 +714,8 @@
 10 Chirodzo 2016-11-17 00:00:00         9         7 muddaub             
 # … with 29 more rows</code></pre>
 </div>
-<p>Note that the final dataframe (<code>interviews_ch</code>) is the leftmost part of this expression.</p>
+<p>Note that the final dataframe (<code>interviews_ch</code>) is the
+leftmost part of this expression.</p>
 <div id="challenge1" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -623,7 +724,11 @@
 <h3 class="callout-title">Exercise<a class="anchor" aria-label="anchor" href="#challenge1"></a>
 </h3>
 <div class="callout-content">
-<p>Using pipes, subset the <code>interviews</code> data to include interviews where respondents were members of an irrigation association (<code>memb_assoc</code>) and retain only the columns <code>affect_conflicts</code>, <code>liv_count</code>, and <code>no_meals</code>.</p>
+<p>Using pipes, subset the <code>interviews</code> data to include
+interviews where respondents were members of an irrigation association
+(<code>memb_assoc</code>) and retain only the columns
+<code>affect_conflicts</code>, <code>liv_count</code>, and
+<code>no_meals</code>.</p>
 </div>
 </div>
 </div>
@@ -668,8 +773,12 @@
 </div>
 </section><section id="mutate"><h2 class="section-heading">Mutate<a class="anchor" aria-label="anchor" href="#mutate"></a>
 </h2>
-<hr class="half-width"><p>Frequently you’ll want to create new columns based on the values in existing columns, for example to do unit conversions, or to find the ratio of values in two columns. For this we’ll use <code>mutate()</code>.</p>
-<p>We might be interested in the ratio of number of household members to rooms used for sleeping (i.e. avg number of people per room):</p>
+<hr class="half-width"><p>Frequently you’ll want to create new columns based on the values in
+existing columns, for example to do unit conversions, or to find the
+ratio of values in two columns. For this we’ll use
+<code>mutate()</code>.</p>
+<p>We might be interested in the ratio of number of household members to
+rooms used for sleeping (i.e. avg number of people per room):</p>
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -698,8 +807,14 @@
 #   instanceID &lt;chr&gt;, people_per_room &lt;dbl&gt;, and abbreviated variable names
 #   ¹​respondent_wall_type, ²​memb_assoc</code></pre>
 </div>
-<p>We may be interested in investigating whether being a member of an irrigation association had any effect on the ratio of household members to rooms. To look at this relationship, we will first remove data from our dataset where the respondent didn’t answer the question of whether they were a member of an irrigation association. These cases are recorded as “NULL” in the dataset.</p>
-<p>To remove these cases, we could insert a <code>filter()</code> in the chain:</p>
+<p>We may be interested in investigating whether being a member of an
+irrigation association had any effect on the ratio of household members
+to rooms. To look at this relationship, we will first remove data from
+our dataset where the respondent didn’t answer the question of whether
+they were a member of an irrigation association. These cases are
+recorded as “NULL” in the dataset.</p>
+<p>To remove these cases, we could insert a <code>filter()</code> in the
+chain:</p>
 <div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -729,7 +844,12 @@
 #   instanceID &lt;chr&gt;, people_per_room &lt;dbl&gt;, and abbreviated variable names
 #   ¹​respondent_wall_type, ²​memb_assoc</code></pre>
 </div>
-<p>The <code>!</code> symbol negates the result of the <code>is.na()</code> function. Thus, if <code>is.na()</code> returns a value of <code>TRUE</code> (because the <code>memb_assoc</code> is missing), the <code>!</code> symbol negates this and says we only want values of <code>FALSE</code>, where <code>memb_assoc</code> <strong>is not</strong> missing.</p>
+<p>The <code>!</code> symbol negates the result of the
+<code>is.na()</code> function. Thus, if <code>is.na()</code> returns a
+value of <code>TRUE</code> (because the <code>memb_assoc</code> is
+missing), the <code>!</code> symbol negates this and says we only want
+values of <code>FALSE</code>, where <code>memb_assoc</code> <strong>is
+not</strong> missing.</p>
 <div id="challenge2" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -738,8 +858,15 @@
 <h3 class="callout-title">Exercise<a class="anchor" aria-label="anchor" href="#challenge2"></a>
 </h3>
 <div class="callout-content">
-<p>Create a new dataframe from the <code>interviews</code> data that meets the following criteria: contains only the <code>village</code> column and a new column called <code>total_meals</code> containing a value that is equal to the total number of meals served in the household per day on average (<code>no_membrs</code> times <code>no_meals</code>). Only the rows where <code>total_meals</code> is greater than 20 should be shown in the final dataframe.</p>
-<p><strong>Hint</strong>: think about how the commands should be ordered to produce this data frame!</p>
+<p>Create a new dataframe from the <code>interviews</code> data that
+meets the following criteria: contains only the <code>village</code>
+column and a new column called <code>total_meals</code> containing a
+value that is equal to the total number of meals served in the household
+per day on average (<code>no_membrs</code> times <code>no_meals</code>).
+Only the rows where <code>total_meals</code> is greater than 20 should
+be shown in the final dataframe.</p>
+<p><strong>Hint</strong>: think about how the commands should be ordered
+to produce this data frame!</p>
 </div>
 </div>
 </div>
@@ -767,10 +894,19 @@
 </div>
 </section><section id="split-apply-combine-data-analysis-and-the-summarize-function"><h2 class="section-heading">Split-apply-combine data analysis and the summarize() function<a class="anchor" aria-label="anchor" href="#split-apply-combine-data-analysis-and-the-summarize-function"></a>
 </h2>
-<hr class="half-width"><p>Many data analysis tasks can be approached using the <em>split-apply-combine</em> paradigm: split the data into groups, apply some analysis to each group, and then combine the results. <strong><code>dplyr</code></strong> makes this very easy through the use of the <code>group_by()</code> function.</p>
+<hr class="half-width"><p>Many data analysis tasks can be approached using the
+<em>split-apply-combine</em> paradigm: split the data into groups, apply
+some analysis to each group, and then combine the results.
+<strong><code>dplyr</code></strong> makes this very easy through the use
+of the <code>group_by()</code> function.</p>
 <div class="section level3">
 <h3 id="the-summarize-function">The <code>summarize()</code> function<a class="anchor" aria-label="anchor" href="#the-summarize-function"></a></h3>
-<p><code>group_by()</code> is often used together with <code>summarize()</code>, which collapses each group into a single-row summary of that group. <code>group_by()</code> takes as arguments the column names that contain the <strong>categorical</strong> variables for which you want to calculate the summary statistics. So to compute the average household size by village:</p>
+<p><code>group_by()</code> is often used together with
+<code>summarize()</code>, which collapses each group into a single-row
+summary of that group. <code>group_by()</code> takes as arguments the
+column names that contain the <strong>categorical</strong> variables for
+which you want to calculate the summary statistics. So to compute the
+average household size by village:</p>
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -789,7 +925,9 @@
 2 God                6.86
 3 Ruaca              7.57</code></pre>
 </div>
-<p>You may also have noticed that the output from these calls doesn’t run off the screen anymore. It’s one of the advantages of <code>tbl_df</code> over dataframe.</p>
+<p>You may also have noticed that the output from these calls doesn’t
+run off the screen anymore. It’s one of the advantages of
+<code>tbl_df</code> over dataframe.</p>
 <p>You can also group by multiple columns:</p>
 <div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -822,7 +960,8 @@
 8 Ruaca    yes                  9.5 
 9 Ruaca    &lt;NA&gt;                 6.22</code></pre>
 </div>
-<p>Note that the output is a grouped tibble. To obtain an ungrouped tibble, use the <code>ungroup</code> function:</p>
+<p>Note that the output is a grouped tibble. To obtain an ungrouped
+tibble, use the <code>ungroup</code> function:</p>
 <div class="codewrapper sourceCode" id="cb29">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -854,7 +993,10 @@
 8 Ruaca    yes                  9.5 
 9 Ruaca    &lt;NA&gt;                 6.22</code></pre>
 </div>
-<p>When grouping both by <code>village</code> and <code>membr_assoc</code>, we see rows in our table for respondents who did not specify whether they were a member of an irrigation association. We can exclude those data from our table using a filter step.</p>
+<p>When grouping both by <code>village</code> and
+<code>membr_assoc</code>, we see rows in our table for respondents who
+did not specify whether they were a member of an irrigation association.
+We can exclude those data from our table using a filter step.</p>
 <div class="codewrapper sourceCode" id="cb32">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -884,7 +1026,11 @@
 5 Ruaca    no                   7.18
 6 Ruaca    yes                  9.5 </code></pre>
 </div>
-<p>Once the data are grouped, you can also summarize multiple variables at the same time (and not necessarily on the same variable). For instance, we could add a column indicating the minimum household size for each village for each group (members of an irrigation association vs not):</p>
+<p>Once the data are grouped, you can also summarize multiple variables
+at the same time (and not necessarily on the same variable). For
+instance, we could add a column indicating the minimum household size
+for each village for each group (members of an irrigation association vs
+not):</p>
 <div class="codewrapper sourceCode" id="cb35">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -915,7 +1061,9 @@
 5 Ruaca    no                   7.18          2
 6 Ruaca    yes                  9.5           5</code></pre>
 </div>
-<p>It is sometimes useful to rearrange the result of a query to inspect the values. For instance, we can sort on <code>min_membrs</code> to put the group with the smallest household first:</p>
+<p>It is sometimes useful to rearrange the result of a query to inspect
+the values. For instance, we can sort on <code>min_membrs</code> to put
+the group with the smallest household first:</p>
 <div class="codewrapper sourceCode" id="cb38">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -947,7 +1095,9 @@
 5 God      yes                  8             5
 6 Ruaca    yes                  9.5           5</code></pre>
 </div>
-<p>To sort in descending order, we need to add the <code>desc()</code> function. If we want to sort the results by decreasing order of minimum household size:</p>
+<p>To sort in descending order, we need to add the <code>desc()</code>
+function. If we want to sort the results by decreasing order of minimum
+household size:</p>
 <div class="codewrapper sourceCode" id="cb41">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -982,7 +1132,11 @@
 </div>
 <div class="section level3">
 <h3 id="counting">Counting<a class="anchor" aria-label="anchor" href="#counting"></a></h3>
-<p>When working with data, we often want to know the number of observations found for each factor or combination of factors. For this task, <strong><code>dplyr</code></strong> provides <code>count()</code>. For example, if we wanted to count the number of rows of data for each village, we would do:</p>
+<p>When working with data, we often want to know the number of
+observations found for each factor or combination of factors. For this
+task, <strong><code>dplyr</code></strong> provides <code>count()</code>.
+For example, if we wanted to count the number of rows of data for each
+village, we would do:</p>
 <div class="codewrapper sourceCode" id="cb44">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1000,7 +1154,8 @@
 2 God         43
 3 Ruaca       49</code></pre>
 </div>
-<p>For convenience, <code>count()</code> provides the <code>sort</code> argument to get results in decreasing order:</p>
+<p>For convenience, <code>count()</code> provides the <code>sort</code>
+argument to get results in decreasing order:</p>
 <div class="codewrapper sourceCode" id="cb46">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1026,7 +1181,9 @@
 <h3 class="callout-title">Exercise<a class="anchor" aria-label="anchor" href="#challenge3"></a>
 </h3>
 <div class="callout-content">
-<p>How many households in the survey have an average of two meals per day? Three meals per day? Are there any other numbers of meals represented?</p>
+<p>How many households in the survey have an average of two meals per
+day? Three meals per day? Are there any other numbers of meals
+represented?</p>
 </div>
 </div>
 </div>
@@ -1067,7 +1224,9 @@
 <h3 class="callout-title">Exercise<em> (continued)</em><a class="anchor" aria-label="anchor" href="#challenge4"></a>
 </h3>
 <div class="callout-content">
-<p>Use <code>group_by()</code> and <code>summarize()</code> to find the mean, min, and max number of household members for each village. Also add the number of observations (hint: see <code>?n</code>).</p>
+<p>Use <code>group_by()</code> and <code>summarize()</code> to find the
+mean, min, and max number of household members for each village. Also
+add the number of observations (hint: see <code>?n</code>).</p>
 </div>
 </div>
 </div>
@@ -1193,7 +1352,8 @@ Attaching package: 'lubridate'</code></pre>
 <ul><li>Use the <code>dplyr</code> package to manipulate dataframes.</li>
 <li>Use <code>select()</code> to choose variables from a dataframe.</li>
 <li>Use <code>filter()</code> to choose data based on values.</li>
-<li>Use <code>group_by()</code> and <code>summarize()</code> to work with subsets of data.</li>
+<li>Use <code>group_by()</code> and <code>summarize()</code> to work
+with subsets of data.</li>
 <li>Use <code>mutate()</code> to create new variables.</li>
 </ul></div>
 </div>

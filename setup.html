@@ -288,62 +288,122 @@
         
 <section id="setup-instructions"><h2 class="section-heading">Setup instructions<a class="anchor" aria-label="anchor" href="#setup-instructions"></a>
 </h2>
-<hr class="half-width"><p><strong>R</strong> and <strong>RStudio</strong> are separate downloads and installations. R is the underlying statistical computing environment, but using R alone is no fun. RStudio is a graphical integrated development environment (IDE) that makes using R much easier and more interactive. You need to install R before you install RStudio. Once installed, because RStudio is an IDE, RStudio will run R in the background. You do not need to run it separately.</p>
-<p>After installing both programs, you will need to install the <strong><code>tidyverse</code></strong> package from within RStudio. The <strong><code>tidyverse</code></strong> package is a powerful collection of data science tools within <strong>R</strong> see the <a href="https://tidyverse.tidyverse.org" class="external-link"><strong><code>tidyverse</code></strong> website</a> for more details. Follow the instructions below for your operating system, and then follow the instructions to install <strong><code>tidyverse</code></strong>.</p>
+<hr class="half-width"><p><strong>R</strong> and <strong>RStudio</strong> are separate
+downloads and installations. R is the underlying statistical computing
+environment, but using R alone is no fun. RStudio is a graphical
+integrated development environment (IDE) that makes using R much easier
+and more interactive. You need to install R before you install RStudio.
+Once installed, because RStudio is an IDE, RStudio will run R in the
+background. You do not need to run it separately.</p>
+<p>After installing both programs, you will need to install the
+<strong><code>tidyverse</code></strong> package from within RStudio. The
+<strong><code>tidyverse</code></strong> package is a powerful collection
+of data science tools within <strong>R</strong> see the <a href="https://tidyverse.tidyverse.org" class="external-link"><strong><code>tidyverse</code></strong>
+website</a> for more details. Follow the instructions below for your
+operating system, and then follow the instructions to install
+<strong><code>tidyverse</code></strong>.</p>
 <div class="section level3">
 <h3 id="windows">Windows<a class="anchor" aria-label="anchor" href="#windows"></a></h3>
 <div class="section level4">
 <h4 id="if-you-already-have-r-and-rstudio-installed">If you already have R and RStudio installed<a class="anchor" aria-label="anchor" href="#if-you-already-have-r-and-rstudio-installed"></a></h4>
-<ul><li>Open RStudio, and click on “Help” &gt; “Check for updates”. If a new version is available, quit RStudio, and download the latest version for RStudio.</li>
-<li>To check which version of R you are using, start RStudio and the first thing that appears in the console indicates the version of R you are running. Alternatively, you can type <code>sessionInfo()</code>, which will also display which version of R you are running. Go on the <a href="https://cran.r-project.org/bin/windows/base/" class="external-link">CRAN website</a> and check whether a more recent version is available. If so, you can update R using the <code>installr</code> package, by running:</li>
+<ul><li>Open RStudio, and click on “Help” &gt; “Check for updates”. If a new
+version is available, quit RStudio, and download the latest version for
+RStudio.</li>
+<li>To check which version of R you are using, start RStudio and the
+first thing that appears in the console indicates the version of R you
+are running. Alternatively, you can type <code>sessionInfo()</code>,
+which will also display which version of R you are running. Go on the <a href="https://cran.r-project.org/bin/windows/base/" class="external-link">CRAN website</a> and
+check whether a more recent version is available. If so, you can update
+R using the <code>installr</code> package, by running:</li>
 </ul><pre><code><span><span class="kw">if</span><span class="op">(</span> <span class="op">!</span><span class="op">(</span><span class="st">"installr"</span> <span class="op">%in%</span> <span class="fu">installed.packages</span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">)</span><span class="op">{</span><span class="fu">install.packages</span><span class="op">(</span><span class="st">"installr"</span><span class="op">)</span><span class="op">}</span></span>
 <span><span class="fu">installr</span><span class="fu">::</span><span class="fu">updateR</span><span class="op">(</span><span class="cn">TRUE</span><span class="op">)</span></span></code></pre>
 <p>{: .language-r}</p>
 </div>
 <div class="section level4">
 <h4 id="if-you-dont-have-r-and-rstudio-installed">If you don’t have R and RStudio installed<a class="anchor" aria-label="anchor" href="#if-you-dont-have-r-and-rstudio-installed"></a></h4>
-<ul><li>Download R from the <a href="http://cran.r-project.org/bin/windows/base/release.htm" class="external-link">CRAN website</a>.</li>
+<ul><li>Download R from the <a href="http://cran.r-project.org/bin/windows/base/release.htm" class="external-link">CRAN
+website</a>.</li>
 <li>Run the <code>.exe</code> file that was just downloaded.</li>
-<li>Go to the <a href="https://www.rstudio.com/products/rstudio/download/#download" class="external-link">RStudio download page</a>.</li>
-<li>Under <em>Installers</em> select <strong>RStudio x.yy.zzz - Windows. Vista/7/8/10</strong> (where x, y, and z represent version numbers).</li>
+<li>Go to the <a href="https://www.rstudio.com/products/rstudio/download/#download" class="external-link">RStudio
+download page</a>.</li>
+<li>Under <em>Installers</em> select <strong>RStudio x.yy.zzz - Windows.
+Vista/7/8/10</strong> (where x, y, and z represent version
+numbers).</li>
 <li>Double click the file to install it.</li>
-<li>Once it’s installed, open RStudio to make sure it works and you don’t get any error messages.</li>
+<li>Once it’s installed, open RStudio to make sure it works and you
+don’t get any error messages.</li>
 </ul></div>
 </div>
 <div class="section level3">
 <h3 id="macos">macOS<a class="anchor" aria-label="anchor" href="#macos"></a></h3>
 <div class="section level4">
 <h4 id="if-you-already-have-r-and-rstudio-installed-1">If you already have R and RStudio installed<a class="anchor" aria-label="anchor" href="#if-you-already-have-r-and-rstudio-installed-1"></a></h4>
-<ul><li>Open RStudio, and click on “Help” &gt; “Check for updates”. If a new version is available, quit RStudio, and download the latest version for RStudio.</li>
-<li>To check the version of R you are using, start RStudio and the first thing that appears on the terminal indicates the version of R you are running. Alternatively, you can type <code>sessionInfo()</code>, which will also display which version of R you are running. Go on the <a href="https://cran.r-project.org/bin/macosx/" class="external-link">CRAN website</a> and check whether a more recent version is available. If so, please download and install it. In any case, make sure you have at least R 3.2.</li>
+<ul><li>Open RStudio, and click on “Help” &gt; “Check for updates”. If a new
+version is available, quit RStudio, and download the latest version for
+RStudio.</li>
+<li>To check the version of R you are using, start RStudio and the first
+thing that appears on the terminal indicates the version of R you are
+running. Alternatively, you can type <code>sessionInfo()</code>, which
+will also display which version of R you are running. Go on the <a href="https://cran.r-project.org/bin/macosx/" class="external-link">CRAN website</a> and check
+whether a more recent version is available. If so, please download and
+install it. In any case, make sure you have at least R 3.2.</li>
 </ul></div>
 <div class="section level4">
 <h4 id="if-you-dont-have-r-and-rstudio-installed-1">If you don’t have R and RStudio installed<a class="anchor" aria-label="anchor" href="#if-you-dont-have-r-and-rstudio-installed-1"></a></h4>
 <ul><li>Download R from the <a href="http://cran.r-project.org/bin/macosx/" class="external-link">CRAN website</a>.</li>
 <li>Select the <code>.pkg</code> file for the latest R version.</li>
 <li>Double click on the downloaded file to install R.</li>
-<li>It is also a good idea to install <a href="https://www.xquartz.org/" class="external-link">XQuartz</a> (needed by some packages).</li>
-<li>Go to the <a href="https://www.rstudio.com/products/rstudio/download/#download" class="external-link">RStudio download page</a>.</li>
-<li>Under <em>Installers</em> select <strong>RStudio x.yy.zzz - Mac OS X 10.6+ (64-bit)</strong> (where x, y, and z represent version numbers).</li>
+<li>It is also a good idea to install <a href="https://www.xquartz.org/" class="external-link">XQuartz</a> (needed by some
+packages).</li>
+<li>Go to the <a href="https://www.rstudio.com/products/rstudio/download/#download" class="external-link">RStudio
+download page</a>.</li>
+<li>Under <em>Installers</em> select <strong>RStudio x.yy.zzz - Mac OS X
+10.6+ (64-bit)</strong> (where x, y, and z represent version
+numbers).</li>
 <li>Double click the file to install RStudio.</li>
-<li>Once it’s installed, open RStudio to make sure it works and you don’t get any error messages.</li>
+<li>Once it’s installed, open RStudio to make sure it works and you
+don’t get any error messages.</li>
 </ul></div>
 </div>
 <div class="section level3">
 <h3 id="linux">Linux<a class="anchor" aria-label="anchor" href="#linux"></a></h3>
-<ul><li>Follow the instructions for your distribution from <a href="https://cloud.r-project.org/bin/linux" class="external-link">CRAN</a>, they provide information to get the most recent version of R for common distributions. For most distributions, you could use your package manager (e.g., for Debian/Ubuntu run <code>sudo apt-get install r-base</code>, and for Fedora <code>sudo yum install R</code>), but we don’t recommend this approach as the versions provided by this approach are usually out of date. In any case, make sure you have at least R 3.2.</li>
-<li>Go to the <a href="https://www.rstudio.com/products/rstudio/download/#download" class="external-link">RStudio download page</a>.</li>
-<li>Under <em>Installers</em> select the version that matches your distribution, and install it with your preferred method (e.g., with Debian/Ubuntu <code>sudo dpkg -i   rstudio-x.yy.zzz-amd64.deb</code> at the terminal).</li>
-<li>Once it’s installed, open RStudio to make sure it works and you don’t get any error messages.</li>
-<li>Before installing the <code>tidyverse</code> package, <strong>Ubuntu</strong> (and related) users may need to install the following dependencies: <code>libcurl4-openssl-dev libssl-dev libxml2-dev</code> (e.g. <code>sudo apt install libcurl4-openssl-dev libssl-dev libxml2-dev</code>).</li>
+<ul><li>Follow the instructions for your distribution from <a href="https://cloud.r-project.org/bin/linux" class="external-link">CRAN</a>, they provide
+information to get the most recent version of R for common
+distributions. For most distributions, you could use your package
+manager (e.g., for Debian/Ubuntu run
+<code>sudo apt-get install r-base</code>, and for Fedora
+<code>sudo yum install R</code>), but we don’t recommend this approach
+as the versions provided by this approach are usually out of date. In
+any case, make sure you have at least R 3.2.</li>
+<li>Go to the <a href="https://www.rstudio.com/products/rstudio/download/#download" class="external-link">RStudio
+download page</a>.</li>
+<li>Under <em>Installers</em> select the version that matches your
+distribution, and install it with your preferred method (e.g., with
+Debian/Ubuntu <code>sudo dpkg -i   rstudio-x.yy.zzz-amd64.deb</code> at
+the terminal).</li>
+<li>Once it’s installed, open RStudio to make sure it works and you
+don’t get any error messages.</li>
+<li>Before installing the <code>tidyverse</code> package,
+<strong>Ubuntu</strong> (and related) users may need to install the
+following dependencies:
+<code>libcurl4-openssl-dev libssl-dev libxml2-dev</code>
+(e.g. <code>sudo apt install libcurl4-openssl-dev libssl-dev libxml2-dev</code>).</li>
 </ul></div>
 <div class="section level3">
 <h3 id="for-everyone">For everyone<a class="anchor" aria-label="anchor" href="#for-everyone"></a></h3>
-<p><strong>After installing R and RStudio, you need to install the <code>tidyverse</code> and <code>here</code> packages.</strong></p>
-<ul><li><p>After starting RStudio, at the console type: <code>install.packages("tidyverse")</code> followed by the enter key. Once this has installed, type <code>install.packages("here")</code> followed by the enter key. Both packages should now be installed.</p></li>
-<li><p>For reference, the lesson uses <code>SAFI_clean.csv</code>. The direct download link for this file is: <a href="https://ndownloader.figshare.com/files/11492171" class="external-link uri">https://ndownloader.figshare.com/files/11492171</a>. To download from <code>R</code>:</p></li>
+<p><strong>After installing R and RStudio, you need to install the
+<code>tidyverse</code> and <code>here</code> packages.</strong></p>
+<ul><li><p>After starting RStudio, at the console type:
+<code>install.packages("tidyverse")</code> followed by the enter key.
+Once this has installed, type <code>install.packages("here")</code>
+followed by the enter key. Both packages should now be
+installed.</p></li>
+<li><p>For reference, the lesson uses <code>SAFI_clean.csv</code>. The
+direct download link for this file is: <a href="https://ndownloader.figshare.com/files/11492171" class="external-link uri">https://ndownloader.figshare.com/files/11492171</a>. To
+download from <code>R</code>:</p></li>
 </ul><p><code>download.file("https://ndownloader.figshare.com/files/11492171","data/SAFI_clean.csv", mode = "wb")</code></p>
-<ul><li>The <a href="https://datacarpentry.org/r-socialsci/06-json/index.html" class="external-link">json episode</a> uses <code>SAFI.json</code>. The downlink link is <a href="https://raw.githubusercontent.com/datacarpentry/r-socialsci/main/data/SAFI.json" class="external-link uri">https://raw.githubusercontent.com/datacarpentry/r-socialsci/main/data/SAFI.json</a>.</li>
+<ul><li>The <a href="https://datacarpentry.org/r-socialsci/06-json/index.html" class="external-link">json
+episode</a> uses <code>SAFI.json</code>. The downlink link is <a href="https://raw.githubusercontent.com/datacarpentry/r-socialsci/main/data/SAFI.json" class="external-link uri">https://raw.githubusercontent.com/datacarpentry/r-socialsci/main/data/SAFI.json</a>.</li>
 </ul></div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">

@@ -299,13 +299,17 @@
 <li>
 <code>args()</code> # find what arguments a function takes</li>
 <li>
-<code>length()</code> # how many elements are in a particular vector</li>
+<code>length()</code> # how many elements are in a particular
+vector</li>
 <li>
-<code>class()</code> # the class (the type of element) of an object</li>
+<code>class()</code> # the class (the type of element) of an
+object</li>
 <li>
-<code>str()</code> # an overview of the object and the elements it contains</li>
+<code>str()</code> # an overview of the object and the elements it
+contains</li>
 <li>
-<code>typeof</code> # determines the (R internal) type or storage mode of any object</li>
+<code>typeof</code> # determines the (R internal) type or storage
+mode of any object</li>
 <li>
 <code>c()</code> # create vector; add elements to vector</li>
 <li>
@@ -315,14 +319,17 @@
 <li>
 <code>is.na()</code> # test if there are missing values</li>
 <li>
-<code>na.omit()</code> # Returns the object with incomplete cases removed</li>
+<code>na.omit()</code> # Returns the object with incomplete cases
+removed</li>
 <li>
-<code>complete.cases()</code># elements which are complete cases</li>
+<code>complete.cases()</code># elements which are complete
+cases</li>
 </ul></div>
 <div class="section level3">
 <h3 id="lesson-2-starting-with-data">Lesson 2 – Starting with Data<a class="anchor" aria-label="anchor" href="#lesson-2-starting-with-data"></a></h3>
 <ul><li>
-<code>download.file()</code> # download files from the internet to your computer</li>
+<code>download.file()</code> # download files from the internet to
+your computer</li>
 <li>
 <code>read_csv()</code> # load CSV file into R memory</li>
 <li>
@@ -330,9 +337,11 @@
 <li>
 <code>view()</code> # invoke a spreadsheet-style data viewer</li>
 <li>
-<code>read_delim()</code> # load a file in table format into R memory</li>
+<code>read_delim()</code> # load a file in table format into R
+memory</li>
 <li>
-<code>str()</code> # check structure of the object and information about the class, length and content of each column</li>
+<code>str()</code> # check structure of the object and information
+about the class, length and content of each column</li>
 <li>
 <code>dim()</code> # check dimension of data frame</li>
 <li>
@@ -342,13 +351,15 @@
 <li>
 <code>tail()</code> # shows the last 6 rows</li>
 <li>
-<code>names()</code> # returns the column names (synonym of colnames() for data frame objects)</li>
+<code>names()</code> # returns the column names (synonym of
+colnames() for data frame objects)</li>
 <li>
 <code>rownames()</code> # returns the row names</li>
 <li>
 <code>summary()</code> # summary statistics for each column</li>
 <li>
-<code>glimpse</code> # like <code>str()</code> applied to a data frame but tries to show as much data as possible</li>
+<code>glimpse</code> # like <code>str()</code> applied to a data
+frame but tries to show as much data as possible</li>
 <li>
 <code>factor()</code> # create factors</li>
 <li>
@@ -356,13 +367,17 @@
 <li>
 <code>nlevels()</code> # check number of levels of a factor</li>
 <li>
-<code>as.character()</code> # convert an object to a character vector</li>
+<code>as.character()</code> # convert an object to a character
+vector</li>
 <li>
-<code>as.numeric()</code> # convert an object to a numeric vector</li>
+<code>as.numeric()</code> # convert an object to a numeric
+vector</li>
 <li>
-<code>as.numeric(as.character(x))</code> # convert factors where the levels appear as characters to a numeric vector</li>
+<code>as.numeric(as.character(x))</code> # convert factors where the
+levels appear as characters to a numeric vector</li>
 <li>
-<code>as.numeric(levels(x))[x]</code> # convert factors where the levels appear as numbers to a numeric vector</li>
+<code>as.numeric(levels(x))[x]</code> # convert factors where the
+levels appear as numbers to a numeric vector</li>
 <li>
 <code>plot()</code> # plot an object</li>
 <li>
@@ -370,30 +385,38 @@
 <li>
 <code>data.frame()</code> # create a data.frame object</li>
 <li>
-<code>ymd()</code> # convert a vector representing year, month, and day to a Date vector</li>
+<code>ymd()</code> # convert a vector representing year, month, and
+day to a Date vector</li>
 <li>
-<code>paste()</code> # concatenate vectors after converting to character</li>
+<code>paste()</code> # concatenate vectors after converting to
+character</li>
 </ul></div>
 <div class="section level3">
 <h3 id="lesson-3-data-wrangling-with-dplyr-and-tidyr">Lesson 3 – Data Wrangling with dplyr and tidyr<a class="anchor" aria-label="anchor" href="#lesson-3-data-wrangling-with-dplyr-and-tidyr"></a></h3>
 <ul><li>
-<code>str()</code> # check structure of the object and information about the class, length and content of each column</li>
+<code>str()</code> # check structure of the object and information
+about the class, length and content of each column</li>
 <li>
 <code>view()</code> # invoke a spreadsheet-style data viewer</li>
 <li>
 <code>select()</code> # select columns of a data frame</li>
 <li>
-<code>filter()</code> # allows you to select a subset of rows in a data frame</li>
+<code>filter()</code> # allows you to select a subset of rows in a
+data frame</li>
 <li>
-<code>%&gt;%</code> # pipes to select and filter at the same time</li>
+<code>%&gt;%</code> # pipes to select and filter at the same
+time</li>
 <li>
-<code>mutate()</code> # create new columns based on the values in existing columns</li>
+<code>mutate()</code> # create new columns based on the values in
+existing columns</li>
 <li>
 <code>head()</code> # shows the first 6 rows</li>
 <li>
-<code>group_by()</code> # split the data into groups, apply some analysis to each group, and then combine the results.</li>
+<code>group_by()</code> # split the data into groups, apply some
+analysis to each group, and then combine the results.</li>
 <li>
-<code>summarize()</code> # collapses each group into a single-row summary of that group</li>
+<code>summarize()</code> # collapses each group into a single-row
+summary of that group</li>
 <li>
 <code>mean()</code> # calculate the mean value of a vector</li>
 <li>
@@ -405,13 +428,17 @@
 <li>
 <code>arrange()</code> # arrange rows by variables</li>
 <li>
-<code>desc()</code> # transform a vector into a format that will be sorted in descending order</li>
+<code>desc()</code> # transform a vector into a format that will be
+sorted in descending order</li>
 <li>
-<code>count()</code> # counts the total number of records for each category</li>
+<code>count()</code> # counts the total number of records for each
+category</li>
 <li>
-<code>pivot_wider()</code> # reshape a data frame by a key-value pair across multiple columns</li>
+<code>pivot_wider()</code> # reshape a data frame by a key-value
+pair across multiple columns</li>
 <li>
-<code>pivot_longer()</code> # reshape a data frame by collapsing into a key-value pair</li>
+<code>pivot_longer()</code> # reshape a data frame by collapsing
+into a key-value pair</li>
 <li>
 <code>replace_na()</code> # Replace NAs with specified values</li>
 <li>
@@ -422,27 +449,36 @@
 <div class="section level3">
 <h3 id="lesson-4-data-visualization-with-ggplot2">Lesson 4 – Data Visualization with ggplot2<a class="anchor" aria-label="anchor" href="#lesson-4-data-visualization-with-ggplot2"></a></h3>
 <ul><li>
-<code>read_csv()</code> # load a csv formatted file into R memory</li>
+<code>read_csv()</code> # load a csv formatted file into R
+memory</li>
 <li>
-<code>ggplot2(data= , aes(x= , y= )) + geom_point( ) + facet_wrap () + theme_bw() + theme()</code> # skeleton for creating plot layers</li>
+<code>ggplot2(data= , aes(x= , y= )) + geom_point( ) + facet_wrap () + theme_bw() + theme()</code>
+# skeleton for creating plot layers</li>
 <li>
-<code>aes()</code> # by selecting the variables to be plotted and the variables to define the presentation such as plotting size, shape color, etc.</li>
+<code>aes()</code> # by selecting the variables to be plotted and
+the variables to define the presentation such as plotting size, shape
+color, etc.</li>
 <li>
-<code>geom_</code> # graphical representation of the data in the plot (points, lines, bars). To add a geom to the plot use + operator</li>
+<code>geom_</code> # graphical representation of the data in the
+plot (points, lines, bars). To add a geom to the plot use +
+operator</li>
 <li>
-<code>facet_wrap()</code> # allows to split one plot into multiple plots based on a factor included in the dataset</li>
+<code>facet_wrap()</code> # allows to split one plot into multiple
+plots based on a factor included in the dataset</li>
 <li>
 <code>labs()</code> # set labels to plot</li>
 <li>
 <code>theme_bw()</code> # set the background to white</li>
 <li>
-<code>theme()</code> # used to locally modify one or more theme elements in a specific ggplot object</li>
+<code>theme()</code> # used to locally modify one or more theme
+elements in a specific ggplot object</li>
 <li>
 <code>+</code> # arrange ggplots horizontally</li>
 <li>
 <code>/</code> # arrange ggplots vertically</li>
 <li>
-<code>plot_layout()</code> # set width and height of individual plots in a patchwork of plots</li>
+<code>plot_layout()</code> # set width and height of individual
+plots in a patchwork of plots</li>
 <li>
 <code>ggsave()</code> # save a ggplot</li>
 </ul></div>

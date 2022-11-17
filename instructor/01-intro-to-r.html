@@ -312,7 +312,8 @@
 <h3 class="card-title">Questions</h3>
 <ul><li>What data types are available in R?</li>
 <li>What is an object?</li>
-<li>How can values be initially assigned to variables of different data types?</li>
+<li>How can values be initially assigned to variables of different data
+types?</li>
 <li>What arithmetic and logical operators can be used?</li>
 <li>How can subsets be extracted from vectors?</li>
 <li>How does R treat missing values?</li>
@@ -324,12 +325,14 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Define the following terms as they relate to R: object, assign, call, function, arguments, options.</li>
+<ul><li>Define the following terms as they relate to R: object, assign,
+call, function, arguments, options.</li>
 <li>Assign values to objects in R.</li>
 <li>Learn how to name objects.</li>
 <li>Use comments to inform script.</li>
 <li>Solve simple arithmetic operations in R.</li>
-<li>Call functions and use arguments to change their default options.</li>
+<li>Call functions and use arguments to change their default
+options.</li>
 <li>Inspect the content of vectors and manipulate their content.</li>
 <li>Subset and extract values from vectors.</li>
 <li>Analyze vectors with missing data.</li>
@@ -363,16 +366,60 @@
 </h3>
 <pre class="output" tabindex="0"><code>[1] 1.714286</code></pre>
 </div>
-<p>However, to do useful and interesting things, we need to assign <em>values</em> to <em>objects</em>. To create an object, we need to give it a name followed by the assignment operator <code>&lt;-</code>, and the value we want to give it:</p>
+<p>However, to do useful and interesting things, we need to assign
+<em>values</em> to <em>objects</em>. To create an object, we need to
+give it a name followed by the assignment operator <code>&lt;-</code>,
+and the value we want to give it:</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">area_hectares</span> <span class="op">&lt;-</span> <span class="fl">1.0</span></span></code></pre>
 </div>
-<p><code>&lt;-</code> is the assignment operator. It assigns values on the right to objects on the left. So, after executing <code>x &lt;- 3</code>, the value of <code>x</code> is <code>3</code>. The arrow can be read as 3 <strong>goes into</strong> <code>x</code>. For historical reasons, you can also use <code>=</code> for assignments, but not in every context. Because of the <a href="https://blog.revolutionanalytics.com/2008/12/use-equals-or-arrow-for-assignment.html" class="external-link">slight differences</a> in syntax, it is good practice to always use <code>&lt;-</code> for assignments. More generally we prefer the <code>&lt;-</code> syntax over <code>=</code> because it makes it clear what direction the assignment is operating (left assignment), and it increases the read-ability of the code.</p>
-<p>In RStudio, typing <kbd>Alt</kbd> + <kbd>-</kbd> (push <kbd>Alt</kbd> at the same time as the <kbd>-</kbd> key) will write <code>&lt;-</code> in a single keystroke in a PC, while typing <kbd>Option</kbd> + <kbd>-</kbd> (push <kbd>Option</kbd> at the same time as the <kbd>-</kbd> key) does the same in a Mac.</p>
-<p>Objects can be given any name such as <code>x</code>, <code>current_temperature</code>, or <code>subject_id</code>. You want your object names to be explicit and not too long. They cannot start with a number (<code>2x</code> is not valid, but <code>x2</code> is). R is case sensitive (e.g., <code>age</code> is different from <code>Age</code>). There are some names that cannot be used because they are the names of fundamental objects in R (e.g., <code>if</code>, <code>else</code>, <code>for</code>, see <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/Reserved.html" class="external-link">here</a> for a complete list). In general, even if it’s allowed, it’s best to not use them (e.g., <code>c</code>, <code>T</code>, <code>mean</code>, <code>data</code>, <code>df</code>, <code>weights</code>). If in doubt, check the help to see if the name is already in use. It’s also best to avoid dots (<code>.</code>) within an object name as in <code>my.dataset</code>. There are many objects in R with dots in their names for historical reasons, but because dots have a special meaning in R (for methods) and other programming languages, it’s best to avoid them. The recommended writing style it’s called snake_case, which implies using only lowercaseletters and numbers and separating each word with underscores (e.g., animals_weight, average_income). It is also recommended to use nouns for object names, and verbs for function names. It’s important to be consistent in the styling of your code (where you put spaces, how you name objects, etc.). Using a consistent coding style makes your code clearer to read for your future self and your collaborators. In R, three popular style guides are <a href="https://google.github.io/styleguide/Rguide.xml" class="external-link">Google’s</a>, <a href="https://jef.works/R-style-guide/" class="external-link">Jean Fan’s</a> and the <a href="https://style.tidyverse.org/" class="external-link">tidyverse’s</a>. The tidyverse’s is very comprehensive and may seem overwhelming at first. You can install the <a href="https://github.com/jimhester/lintr" class="external-link"><strong><code>lintr</code></strong></a> package to automatically check for issues in the styling of your code.</p>
+<p><code>&lt;-</code> is the assignment operator. It assigns values on
+the right to objects on the left. So, after executing
+<code>x &lt;- 3</code>, the value of <code>x</code> is <code>3</code>.
+The arrow can be read as 3 <strong>goes into</strong> <code>x</code>.
+For historical reasons, you can also use <code>=</code> for assignments,
+but not in every context. Because of the <a href="https://blog.revolutionanalytics.com/2008/12/use-equals-or-arrow-for-assignment.html" class="external-link">slight
+differences</a> in syntax, it is good practice to always use
+<code>&lt;-</code> for assignments. More generally we prefer the
+<code>&lt;-</code> syntax over <code>=</code> because it makes it clear
+what direction the assignment is operating (left assignment), and it
+increases the read-ability of the code.</p>
+<p>In RStudio, typing <kbd>Alt</kbd> + <kbd>-</kbd> (push <kbd>Alt</kbd>
+at the same time as the <kbd>-</kbd> key) will write <code>&lt;-</code>
+in a single keystroke in a PC, while typing <kbd>Option</kbd> +
+<kbd>-</kbd> (push <kbd>Option</kbd> at the same time as the
+<kbd>-</kbd> key) does the same in a Mac.</p>
+<p>Objects can be given any name such as <code>x</code>,
+<code>current_temperature</code>, or <code>subject_id</code>. You want
+your object names to be explicit and not too long. They cannot start
+with a number (<code>2x</code> is not valid, but <code>x2</code> is). R
+is case sensitive (e.g., <code>age</code> is different from
+<code>Age</code>). There are some names that cannot be used because they
+are the names of fundamental objects in R (e.g., <code>if</code>,
+<code>else</code>, <code>for</code>, see <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/Reserved.html" class="external-link">here</a>
+for a complete list). In general, even if it’s allowed, it’s best to not
+use them (e.g., <code>c</code>, <code>T</code>, <code>mean</code>,
+<code>data</code>, <code>df</code>, <code>weights</code>). If in doubt,
+check the help to see if the name is already in use. It’s also best to
+avoid dots (<code>.</code>) within an object name as in
+<code>my.dataset</code>. There are many objects in R with dots in their
+names for historical reasons, but because dots have a special meaning in
+R (for methods) and other programming languages, it’s best to avoid
+them. The recommended writing style it’s called snake_case, which
+implies using only lowercaseletters and numbers and separating each word
+with underscores (e.g., animals_weight, average_income). It is also
+recommended to use nouns for object names, and verbs for function names.
+It’s important to be consistent in the styling of your code (where you
+put spaces, how you name objects, etc.). Using a consistent coding style
+makes your code clearer to read for your future self and your
+collaborators. In R, three popular style guides are <a href="https://google.github.io/styleguide/Rguide.xml" class="external-link">Google’s</a>, <a href="https://jef.works/R-style-guide/" class="external-link">Jean Fan’s</a> and the <a href="https://style.tidyverse.org/" class="external-link">tidyverse’s</a>. The tidyverse’s is
+very comprehensive and may seem overwhelming at first. You can install
+the <a href="https://github.com/jimhester/lintr" class="external-link"><strong><code>lintr</code></strong></a>
+package to automatically check for issues in the styling of your
+code.</p>
 <div id="callout1" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -381,11 +428,17 @@
 <h3 class="callout-title">Objects vs. variables<a class="anchor" aria-label="anchor" href="#callout1"></a>
 </h3>
 <div class="callout-content">
-<p>What are known as <code>objects</code> in <code>R</code> are known as <code>variables</code> in many other programming languages. Depending on the context, <code>object</code> and <code>variable</code> can have drastically different meanings. However, in this lesson, the two words are used synonymously. For more information see: <a href="https://cran.r-project.org/doc/manuals/r-release/R-lang.html#Objects" class="external-link">https://cran.r-project.org/doc/manuals/r-release/R-lang.html#Objects</a></p>
+<p>What are known as <code>objects</code> in <code>R</code> are known as
+<code>variables</code> in many other programming languages. Depending on
+the context, <code>object</code> and <code>variable</code> can have
+drastically different meanings. However, in this lesson, the two words
+are used synonymously. For more information see: <a href="https://cran.r-project.org/doc/manuals/r-release/R-lang.html#Objects" class="external-link">https://cran.r-project.org/doc/manuals/r-release/R-lang.html#Objects</a></p>
 </div>
 </div>
 </div>
-<p>When assigning a value to an object, R does not print anything. You can force R to print the value by using parentheses or by typing the object name:</p>
+<p>When assigning a value to an object, R does not print anything. You
+can force R to print the value by using parentheses or by typing the
+object name:</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -409,7 +462,9 @@
 </h3>
 <pre class="output" tabindex="0"><code>[1] 1</code></pre>
 </div>
-<p>Now that R has <code>area_hectares</code> in memory, we can do arithmetic with it. For instance, we may want to convert this area into acres (area in acres is 2.47 times the area in hectares):</p>
+<p>Now that R has <code>area_hectares</code> in memory, we can do
+arithmetic with it. For instance, we may want to convert this area into
+acres (area in acres is 2.47 times the area in hectares):</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -434,7 +489,9 @@
 </h3>
 <pre class="output" tabindex="0"><code>[1] 6.175</code></pre>
 </div>
-<p>This means that assigning a value to one object does not change the values of other objects. For example, let’s store the plot’s area in acres in a new object, <code>area_acres</code>:</p>
+<p>This means that assigning a value to one object does not change the
+values of other objects. For example, let’s store the plot’s area in
+acres in a new object, <code>area_acres</code>:</p>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -456,7 +513,8 @@
 <h3 class="callout-title">Exercise<a class="anchor" aria-label="anchor" href="#challenge1"></a>
 </h3>
 <div class="callout-content">
-<p>What do you think is the current content of the object <code>area_acres</code>? 123.5 or 6.175?</p>
+<p>What do you think is the current content of the object
+<code>area_acres</code>? 123.5 or 6.175?</p>
 </div>
 </div>
 </div>
@@ -467,17 +525,27 @@
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<p>The value of <code>area_acres</code> is still 6.175 because you have not re-run the line <code>area_acres &lt;- 2.47 * area_hectares</code> since changing the value of <code>area_hectares</code>.</p>
+<p>The value of <code>area_acres</code> is still 6.175 because you have
+not re-run the line <code>area_acres &lt;- 2.47 * area_hectares</code>
+since changing the value of <code>area_hectares</code>.</p>
 </div>
 </div>
 </div>
 </div>
 </section><section id="comments"><h2 class="section-heading">Comments<a class="anchor" aria-label="anchor" href="#comments"></a>
 </h2>
-<hr class="half-width"><p>All programming languages allow the programmer to include comments in their code. Including comments to your code has many advantages: it helps you explain your reasoning and it forces you to be tidy. A commented code is also a great tool not only to your collaborators, but to your future self. Comments are the key to a reproducible analysis.</p>
-<p>To do this in R we use the <code>#</code> character. Anything to the right of the <code>#</code> sign and up to the end of the line is treated as a comment and is ignored by R. You can start lines with comments or include them after any code on the line.</p>
+<hr class="half-width"><p>All programming languages allow the programmer to include comments in
+their code. Including comments to your code has many advantages: it
+helps you explain your reasoning and it forces you to be tidy. A
+commented code is also a great tool not only to your collaborators, but
+to your future self. Comments are the key to a reproducible
+analysis.</p>
+<p>To do this in R we use the <code>#</code> character. Anything to the
+right of the <code>#</code> sign and up to the end of the line is
+treated as a comment and is ignored by R. You can start lines with
+comments or include them after any code on the line.</p>
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -491,7 +559,12 @@
 </h3>
 <pre class="output" tabindex="0"><code>[1] 2.47</code></pre>
 </div>
-<p>RStudio makes it easy to comment or uncomment a paragraph: after selecting the lines you want to comment, press at the same time on your keyboard <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd>. If you only want to comment out one line, you can put the cursor at any location of that line (i.e. no need to select the whole line), then press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd>.</p>
+<p>RStudio makes it easy to comment or uncomment a paragraph: after
+selecting the lines you want to comment, press at the same time on your
+keyboard <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd>. If you only
+want to comment out one line, you can put the cursor at any location of
+that line (i.e. no need to select the whole line), then press
+<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd>.</p>
 <div id="challenge2" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -500,7 +573,16 @@
 <h3 class="callout-title">Exercise<a class="anchor" aria-label="anchor" href="#challenge2"></a>
 </h3>
 <div class="callout-content">
-<p>Create two variables <code>r_length</code> and <code>r_width</code> and assign them values. It should be noted that, because <code>length</code> is a built-in R function, R Studio might add “()” after you type <code>length</code> and if you leave the parentheses you will get unexpected results. This is why you might see other programmers abbreviate common words. Create a third variable <code>r_area</code> and give it a value based on the current values of <code>r_length</code> and <code>r_width</code>. Show that changing the values of either <code>r_length</code> and <code>r_width</code> does not affect the value of <code>r_area</code>.</p>
+<p>Create two variables <code>r_length</code> and <code>r_width</code>
+and assign them values. It should be noted that, because
+<code>length</code> is a built-in R function, R Studio might add “()”
+after you type <code>length</code> and if you leave the parentheses you
+will get unexpected results. This is why you might see other programmers
+abbreviate common words. Create a third variable <code>r_area</code> and
+give it a value based on the current values of <code>r_length</code> and
+<code>r_width</code>. Show that changing the values of either
+<code>r_length</code> and <code>r_width</code> does not affect the value
+of <code>r_area</code>.</p>
 </div>
 </div>
 </div>
@@ -511,7 +593,7 @@
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -548,17 +630,43 @@
 </div>
 <div class="section level3">
 <h3 id="functions-and-their-arguments">Functions and their arguments<a class="anchor" aria-label="anchor" href="#functions-and-their-arguments"></a></h3>
-<p>Functions are “canned scripts” that automate more complicated sets of commands including operations assignments, etc. Many functions are predefined, or can be made available by importing R <em>packages</em> (more on that later). A function usually gets one or more inputs called <em>arguments</em>. Functions often (but not always) return a <em>value</em>. A typical example would be the function <code>sqrt()</code>. The input (the argument) must be a number, and the return value (in fact, the output) is the square root of that number. Executing a function (‘running it’) is called <em>calling</em> the function. An example of a function call is:</p>
+<p>Functions are “canned scripts” that automate more complicated sets of
+commands including operations assignments, etc. Many functions are
+predefined, or can be made available by importing R <em>packages</em>
+(more on that later). A function usually gets one or more inputs called
+<em>arguments</em>. Functions often (but not always) return a
+<em>value</em>. A typical example would be the function
+<code>sqrt()</code>. The input (the argument) must be a number, and the
+return value (in fact, the output) is the square root of that number.
+Executing a function (‘running it’) is called <em>calling</em> the
+function. An example of a function call is:</p>
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">b</span> <span class="op">&lt;-</span> <span class="fu">sqrt</span><span class="op">(</span><span class="va">a</span><span class="op">)</span></span></code></pre>
 </div>
-<p>Here, the value of <code>a</code> is given to the <code>sqrt()</code> function, the <code>sqrt()</code> function calculates the square root, and returns the value which is then assigned to the object <code>b</code>. This function is very simple, because it takes just one argument.</p>
-<p>The return ‘value’ of a function need not be numerical (like that of <code>sqrt()</code>), and it also does not need to be a single item: it can be a set of things, or even a dataset. We’ll see that when we read data files into R.</p>
-<p>Arguments can be anything, not only numbers or filenames, but also other objects. Exactly what each argument means differs per function, and must be looked up in the documentation (see below). Some functions take arguments which may either be specified by the user, or, if left out, take on a <em>default</em> value: these are called <em>options</em>. Options are typically used to alter the way the function operates, such as whether it ignores ‘bad values’, or what symbol to use in a plot. However, if you want something specific, you can specify a value of your choice which will be used instead of the default.</p>
-<p>Let’s try a function that can take multiple arguments: <code>round()</code>.</p>
+<p>Here, the value of <code>a</code> is given to the <code>sqrt()</code>
+function, the <code>sqrt()</code> function calculates the square root,
+and returns the value which is then assigned to the object
+<code>b</code>. This function is very simple, because it takes just one
+argument.</p>
+<p>The return ‘value’ of a function need not be numerical (like that of
+<code>sqrt()</code>), and it also does not need to be a single item: it
+can be a set of things, or even a dataset. We’ll see that when we read
+data files into R.</p>
+<p>Arguments can be anything, not only numbers or filenames, but also
+other objects. Exactly what each argument means differs per function,
+and must be looked up in the documentation (see below). Some functions
+take arguments which may either be specified by the user, or, if left
+out, take on a <em>default</em> value: these are called
+<em>options</em>. Options are typically used to alter the way the
+function operates, such as whether it ignores ‘bad values’, or what
+symbol to use in a plot. However, if you want something specific, you
+can specify a value of your choice which will be used instead of the
+default.</p>
+<p>Let’s try a function that can take multiple arguments:
+<code>round()</code>.</p>
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -570,7 +678,13 @@
 </h3>
 <pre class="output" tabindex="0"><code>[1] 3</code></pre>
 </div>
-<p>Here, we’ve called <code>round()</code> with just one argument, <code>3.14159</code>, and it has returned the value <code>3</code>. That’s because the default is to round to the nearest whole number. If we want more digits we can see how to do that by getting information about the <code>round</code> function. We can use <code>args(round)</code> or look at the help for this function using <code>?round</code>.</p>
+<p>Here, we’ve called <code>round()</code> with just one argument,
+<code>3.14159</code>, and it has returned the value <code>3</code>.
+That’s because the default is to round to the nearest whole number. If
+we want more digits we can see how to do that by getting information
+about the <code>round</code> function. We can use
+<code>args(round)</code> or look at the help for this function using
+<code>?round</code>.</p>
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -589,7 +703,8 @@
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="op">?</span><span class="va">round</span></span></code></pre>
 </div>
-<p>We see that if we want a different number of digits, we can type <code>digits=2</code> or however many we want.</p>
+<p>We see that if we want a different number of digits, we can type
+<code>digits=2</code> or however many we want.</p>
 <div class="codewrapper sourceCode" id="cb28">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -601,7 +716,8 @@
 </h3>
 <pre class="output" tabindex="0"><code>[1] 3.14</code></pre>
 </div>
-<p>If you provide the arguments in the exact same order as they are defined you don’t have to name them:</p>
+<p>If you provide the arguments in the exact same order as they are
+defined you don’t have to name them:</p>
 <div class="codewrapper sourceCode" id="cb30">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -625,7 +741,11 @@
 </h3>
 <pre class="output" tabindex="0"><code>[1] 3.14</code></pre>
 </div>
-<p>It’s good practice to put the non-optional arguments (like the number you’re rounding) first in your function call, and to specify the names of all optional arguments. If you don’t, someone reading your code might have to look up the definition of a function with unfamiliar arguments to understand what you’re doing.</p>
+<p>It’s good practice to put the non-optional arguments (like the number
+you’re rounding) first in your function call, and to specify the names
+of all optional arguments. If you don’t, someone reading your code might
+have to look up the definition of a function with unfamiliar arguments
+to understand what you’re doing.</p>
 <div id="discussion1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -634,14 +754,23 @@
 <h3 class="callout-title">Exercise<a class="anchor" aria-label="anchor" href="#discussion1"></a>
 </h3>
 <div class="callout-content">
-<p>Type in <code>?round</code> at the console and then look at the output in the Help pane. What other functions exist that are similar to <code>round</code>? How do you use the <code>digits</code> parameter in the round function?</p>
+<p>Type in <code>?round</code> at the console and then look at the
+output in the Help pane. What other functions exist that are similar to
+<code>round</code>? How do you use the <code>digits</code> parameter in
+the round function?</p>
 </div>
 </div>
 </div>
 </div>
 </section><section id="vectors-and-data-types"><h2 class="section-heading">Vectors and data types<a class="anchor" aria-label="anchor" href="#vectors-and-data-types"></a>
 </h2>
-<hr class="half-width"><p>A vector is the most common and basic data type in R, and is pretty much the workhorse of R. A vector is composed by a series of values, which can be either numbers or characters. We can assign a series of values to a vector using the <code>c()</code> function. For example we can create a vector of the number of household members for the households we’ve interviewed and assign it to a new object <code>hh_members</code>:</p>
+<hr class="half-width"><p>A vector is the most common and basic data type in R, and is pretty
+much the workhorse of R. A vector is composed by a series of values,
+which can be either numbers or characters. We can assign a series of
+values to a vector using the <code>c()</code> function. For example we
+can create a vector of the number of household members for the
+households we’ve interviewed and assign it to a new object
+<code>hh_members</code>:</p>
 <div class="codewrapper sourceCode" id="cb34">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -654,7 +783,9 @@
 </h3>
 <pre class="output" tabindex="0"><code>[1]  3  7 10  6</code></pre>
 </div>
-<p>A vector can also contain characters. For example, we can have a vector of the building material used to construct our interview respondents’ walls (<code>respondent_wall_type</code>):</p>
+<p>A vector can also contain characters. For example, we can have a
+vector of the building material used to construct our interview
+respondents’ walls (<code>respondent_wall_type</code>):</p>
 <div class="codewrapper sourceCode" id="cb36">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -667,8 +798,13 @@
 </h3>
 <pre class="output" tabindex="0"><code>[1] "muddaub"     "burntbricks" "sunbricks"  </code></pre>
 </div>
-<p>The quotes around “muddaub”, etc. are essential here. Without the quotes R will assume there are objects called <code>muddaub</code>, <code>burntbricks</code> and <code>sunbricks</code>. As these objects don’t exist in R’s memory, there will be an error message.</p>
-<p>There are many functions that allow you to inspect the content of a vector. <code>length()</code> tells you how many elements are in a particular vector:</p>
+<p>The quotes around “muddaub”, etc. are essential here. Without the
+quotes R will assume there are objects called <code>muddaub</code>,
+<code>burntbricks</code> and <code>sunbricks</code>. As these objects
+don’t exist in R’s memory, there will be an error message.</p>
+<p>There are many functions that allow you to inspect the content of a
+vector. <code>length()</code> tells you how many elements are in a
+particular vector:</p>
 <div class="codewrapper sourceCode" id="cb38">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -691,7 +827,9 @@
 </h3>
 <pre class="output" tabindex="0"><code>[1] 3</code></pre>
 </div>
-<p>An important feature of a vector, is that all of the elements are the same type of data. The function <code>typeof()</code> indicates the type of an object:</p>
+<p>An important feature of a vector, is that all of the elements are the
+same type of data. The function <code>typeof()</code> indicates the type
+of an object:</p>
 <div class="codewrapper sourceCode" id="cb42">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -714,7 +852,9 @@
 </h3>
 <pre class="output" tabindex="0"><code>[1] "character"</code></pre>
 </div>
-<p>The function <code>str()</code> provides an overview of the structure of an object and its elements. It is a useful function when working with large and complex objects:</p>
+<p>The function <code>str()</code> provides an overview of the structure
+of an object and its elements. It is a useful function when working with
+large and complex objects:</p>
 <div class="codewrapper sourceCode" id="cb46">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -737,7 +877,8 @@
 </h3>
 <pre class="output" tabindex="0"><code> chr [1:3] "muddaub" "burntbricks" "sunbricks"</code></pre>
 </div>
-<p>You can use the <code>c()</code> function to add other elements to your vector:</p>
+<p>You can use the <code>c()</code> function to add other elements to
+your vector:</p>
 <div class="codewrapper sourceCode" id="cb50">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -752,19 +893,39 @@
 </h3>
 <pre class="output" tabindex="0"><code>[1] "car"          "bicycle"      "radio"        "television"   "mobile_phone"</code></pre>
 </div>
-<p>In the first line, we take the original vector <code>possessions</code>, add the value <code>"mobile_phone"</code> to the end of it, and save the result back into <code>possessions</code>. Then we add the value <code>"car"</code> to the beginning, again saving the result back into <code>possessions</code>.</p>
-<p>We can do this over and over again to grow a vector, or assemble a dataset. As we program, this may be useful to add results that we are collecting or calculating.</p>
-<p>An <strong>atomic vector</strong> is the simplest R <strong>data type</strong> and is a linear vector of a single type. Above, we saw 2 of the 6 main <strong>atomic vector</strong> types that R uses: <code>"character"</code> and <code>"numeric"</code> (or <code>"double"</code>). These are the basic building blocks that all R objects are built from. The other 4 <strong>atomic vector</strong> types are:</p>
+<p>In the first line, we take the original vector
+<code>possessions</code>, add the value <code>"mobile_phone"</code> to
+the end of it, and save the result back into <code>possessions</code>.
+Then we add the value <code>"car"</code> to the beginning, again saving
+the result back into <code>possessions</code>.</p>
+<p>We can do this over and over again to grow a vector, or assemble a
+dataset. As we program, this may be useful to add results that we are
+collecting or calculating.</p>
+<p>An <strong>atomic vector</strong> is the simplest R <strong>data
+type</strong> and is a linear vector of a single type. Above, we saw 2
+of the 6 main <strong>atomic vector</strong> types that R uses:
+<code>"character"</code> and <code>"numeric"</code> (or
+<code>"double"</code>). These are the basic building blocks that all R
+objects are built from. The other 4 <strong>atomic vector</strong> types
+are:</p>
 <ul><li>
-<code>"logical"</code> for <code>TRUE</code> and <code>FALSE</code> (the boolean data type)</li>
+<code>"logical"</code> for <code>TRUE</code> and <code>FALSE</code>
+(the boolean data type)</li>
 <li>
-<code>"integer"</code> for integer numbers (e.g., <code>2L</code>, the <code>L</code> indicates to R that it’s an integer)</li>
+<code>"integer"</code> for integer numbers (e.g., <code>2L</code>,
+the <code>L</code> indicates to R that it’s an integer)</li>
 <li>
-<code>"complex"</code> to represent complex numbers with real and imaginary parts (e.g., <code>1 + 4i</code>) and that’s all we’re going to say about them</li>
+<code>"complex"</code> to represent complex numbers with real and
+imaginary parts (e.g., <code>1 + 4i</code>) and that’s all we’re going
+to say about them</li>
 <li>
 <code>"raw"</code> for bitstreams that we won’t discuss further</li>
-</ul><p>You can check the type of your vector using the <code>typeof()</code> function and inputting your vector as the argument.</p>
-<p>Vectors are one of the many <strong>data structures</strong> that R uses. Other important ones are lists (<code>list</code>), matrices (<code>matrix</code>), data frames (<code>data.frame</code>), factors (<code>factor</code>) and arrays (<code>array</code>).</p>
+</ul><p>You can check the type of your vector using the <code>typeof()</code>
+function and inputting your vector as the argument.</p>
+<p>Vectors are one of the many <strong>data structures</strong> that R
+uses. Other important ones are lists (<code>list</code>), matrices
+(<code>matrix</code>), data frames (<code>data.frame</code>), factors
+(<code>factor</code>) and arrays (<code>array</code>).</p>
 <div id="challenge3" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -773,7 +934,9 @@
 <h3 class="callout-title">Exercise<a class="anchor" aria-label="anchor" href="#challenge3"></a>
 </h3>
 <div class="callout-content">
-<p>We’ve seen that atomic vectors can be of type character, numeric (or double), integer, and logical. But what happens if we try to mix these types in a single vector?</p>
+<p>We’ve seen that atomic vectors can be of type character, numeric (or
+double), integer, and logical. But what happens if we try to mix these
+types in a single vector?</p>
 </div>
 </div>
 </div>
@@ -784,7 +947,7 @@
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>R implicitly converts them to all be the same type.</p>
 </div>
@@ -799,7 +962,8 @@
 <h3 class="callout-title">Exercise<em> (continued)</em><a class="anchor" aria-label="anchor" href="#challenge4"></a>
 </h3>
 <div class="callout-content">
-<p>What will happen in each of these examples? (hint: use <code>class()</code> to check the data type of your objects):</p>
+<p>What will happen in each of these examples? (hint: use
+<code>class()</code> to check the data type of your objects):</p>
 <div class="codewrapper sourceCode" id="cb52">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -820,9 +984,11 @@
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
-<p>Vectors can be of only one data type. R tries to convert (coerce) the content of this vector to find a “common denominator” that doesn’t lose any information.</p>
+<p>Vectors can be of only one data type. R tries to convert (coerce) the
+content of this vector to find a “common denominator” that doesn’t lose
+any information.</p>
 </div>
 </div>
 </div>
@@ -835,7 +1001,8 @@
 <h3 class="callout-title">Exercise<em> (continued)</em><a class="anchor" aria-label="anchor" href="#challenge5"></a>
 </h3>
 <div class="callout-content">
-<p>How many values in <code>combined_logical</code> are <code>"TRUE"</code> (as a character) in the following example:</p>
+<p>How many values in <code>combined_logical</code> are
+<code>"TRUE"</code> (as a character) in the following example:</p>
 <div class="codewrapper sourceCode" id="cb53">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -854,9 +1021,13 @@
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
-<p>Only one. There is no memory of past data types, and the coercion happens the first time the vector is evaluated. Therefore, the <code>TRUE</code> in <code>num_logical</code> gets converted into a <code>1</code> before it gets converted into <code>"1"</code> in <code>combined_logical</code>.</p>
+<p>Only one. There is no memory of past data types, and the coercion
+happens the first time the vector is evaluated. Therefore, the
+<code>TRUE</code> in <code>num_logical</code> gets converted into a
+<code>1</code> before it gets converted into <code>"1"</code> in
+<code>combined_logical</code>.</p>
 </div>
 </div>
 </div>
@@ -869,13 +1040,19 @@
 <h3 class="callout-title">Exercise<em> (continued)</em><a class="anchor" aria-label="anchor" href="#discussion2"></a>
 </h3>
 <div class="callout-content">
-<p>You’ve probably noticed that objects of different types get converted into a single, shared type within a vector. In R, we call converting objects from one class into another class <em>coercion</em>. These conversions happen according to a hierarchy, whereby some types get preferentially coerced into other types. Can you draw a diagram that represents the hierarchy of how these data types are coerced?</p>
+<p>You’ve probably noticed that objects of different types get converted
+into a single, shared type within a vector. In R, we call converting
+objects from one class into another class <em>coercion</em>. These
+conversions happen according to a hierarchy, whereby some types get
+preferentially coerced into other types. Can you draw a diagram that
+represents the hierarchy of how these data types are coerced?</p>
 </div>
 </div>
 </div>
 </section><section id="subsetting-vectors"><h2 class="section-heading">Subsetting vectors<a class="anchor" aria-label="anchor" href="#subsetting-vectors"></a>
 </h2>
-<hr class="half-width"><p>If we want to extract one or several values from a vector, we must provide one or several indices in square brackets. For instance:</p>
+<hr class="half-width"><p>If we want to extract one or several values from a vector, we must
+provide one or several indices in square brackets. For instance:</p>
 <div class="codewrapper sourceCode" id="cb54">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -899,7 +1076,8 @@
 </h3>
 <pre class="output" tabindex="0"><code>[1] "sunbricks"   "burntbricks"</code></pre>
 </div>
-<p>We can also repeat the indices to create an object with more elements than the original one:</p>
+<p>We can also repeat the indices to create an object with more elements
+than the original one:</p>
 <div class="codewrapper sourceCode" id="cb58">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -913,10 +1091,15 @@
 <pre class="output" tabindex="0"><code>[1] "muddaub"     "burntbricks" "sunbricks"   "burntbricks" "muddaub"    
 [6] "sunbricks"  </code></pre>
 </div>
-<p>R indices start at 1. Programming languages like Fortran, MATLAB, Julia, and R start counting at 1, because that’s what human beings typically do. Languages in the C family (including C++, Java, Perl, and Python) count from 0 because that’s simpler for computers to do.</p>
+<p>R indices start at 1. Programming languages like Fortran, MATLAB,
+Julia, and R start counting at 1, because that’s what human beings
+typically do. Languages in the C family (including C++, Java, Perl, and
+Python) count from 0 because that’s simpler for computers to do.</p>
 <div class="section level3">
 <h3 id="conditional-subsetting">Conditional subsetting<a class="anchor" aria-label="anchor" href="#conditional-subsetting"></a></h3>
-<p>Another common way of subsetting is by using a logical vector. <code>TRUE</code> will select the element with the same index, while <code>FALSE</code> will not:</p>
+<p>Another common way of subsetting is by using a logical vector.
+<code>TRUE</code> will select the element with the same index, while
+<code>FALSE</code> will not:</p>
 <div class="codewrapper sourceCode" id="cb60">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -929,7 +1112,9 @@
 </h3>
 <pre class="output" tabindex="0"><code>[1]  3 10  6</code></pre>
 </div>
-<p>Typically, these logical vectors are not typed by hand, but are the output of other functions or logical tests. For instance, if you wanted to select only the values above 5:</p>
+<p>Typically, these logical vectors are not typed by hand, but are the
+output of other functions or logical tests. For instance, if you wanted
+to select only the values above 5:</p>
 <div class="codewrapper sourceCode" id="cb62">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -953,7 +1138,9 @@
 </h3>
 <pre class="output" tabindex="0"><code>[1]  7 10  6</code></pre>
 </div>
-<p>You can combine multiple tests using <code>&amp;</code> (both conditions are true, AND) or <code>|</code> (at least one of the conditions is true, OR):</p>
+<p>You can combine multiple tests using <code>&amp;</code> (both
+conditions are true, AND) or <code>|</code> (at least one of the
+conditions is true, OR):</p>
 <div class="codewrapper sourceCode" id="cb66">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -976,8 +1163,15 @@
 </h3>
 <pre class="output" tabindex="0"><code>[1] 7 6</code></pre>
 </div>
-<p>Here, <code>&lt;</code> stands for “less than”, <code>&gt;</code> for “greater than”, <code>&gt;=</code> for “greater than or equal to”, and <code>==</code> for “equal to”. The double equal sign <code>==</code> is a test for numerical equality between the left and right hand sides, and should not be confused with the single <code>=</code> sign, which performs variable assignment (similar to <code>&lt;-</code>).</p>
-<p>A common task is to search for certain strings in a vector. One could use the “or” operator <code>|</code> to test for equality to multiple values, but this can quickly become tedious.</p>
+<p>Here, <code>&lt;</code> stands for “less than”, <code>&gt;</code> for
+“greater than”, <code>&gt;=</code> for “greater than or equal to”, and
+<code>==</code> for “equal to”. The double equal sign <code>==</code> is
+a test for numerical equality between the left and right hand sides, and
+should not be confused with the single <code>=</code> sign, which
+performs variable assignment (similar to <code>&lt;-</code>).</p>
+<p>A common task is to search for certain strings in a vector. One could
+use the “or” operator <code>|</code> to test for equality to multiple
+values, but this can quickly become tedious.</p>
 <div class="codewrapper sourceCode" id="cb70">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -990,7 +1184,9 @@
 </h3>
 <pre class="output" tabindex="0"><code>[1] "car"     "bicycle"</code></pre>
 </div>
-<p>The function <code>%in%</code> allows you to test if any of the elements of a search vector (on the left hand side) are found in the target vector (on the right hand side):</p>
+<p>The function <code>%in%</code> allows you to test if any of the
+elements of a search vector (on the left hand side) are found in the
+target vector (on the right hand side):</p>
 <div class="codewrapper sourceCode" id="cb72">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1002,7 +1198,11 @@
 </h3>
 <pre class="output" tabindex="0"><code>[1]  TRUE  TRUE FALSE FALSE FALSE</code></pre>
 </div>
-<p>Note that the output is the same length as the search vector on the left hand side, because <code>%in%</code> checks whether each element of the search vector is found somewhere in the target vector. Thus, you can use <code>%in%</code> to select the elements in the search vector that appear in your target vector:</p>
+<p>Note that the output is the same length as the search vector on the
+left hand side, because <code>%in%</code> checks whether each element of
+the search vector is found somewhere in the target vector. Thus, you can
+use <code>%in%</code> to select the elements in the search vector that
+appear in your target vector:</p>
 <div class="codewrapper sourceCode" id="cb74">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1028,8 +1228,14 @@
 </div>
 </section><section id="missing-data"><h2 class="section-heading">Missing data<a class="anchor" aria-label="anchor" href="#missing-data"></a>
 </h2>
-<hr class="half-width"><p>As R was designed to analyze datasets, it includes the concept of missing data (which is uncommon in other programming languages). Missing data are represented in vectors as <code>NA</code>.</p>
-<p>When doing operations on numbers, most functions will return <code>NA</code> if the data you are working with include missing values. This feature makes it harder to overlook the cases where you are dealing with missing data. You can add the argument <code>na.rm=TRUE</code> to calculate the result while ignoring the missing values.</p>
+<hr class="half-width"><p>As R was designed to analyze datasets, it includes the concept of
+missing data (which is uncommon in other programming languages). Missing
+data are represented in vectors as <code>NA</code>.</p>
+<p>When doing operations on numbers, most functions will return
+<code>NA</code> if the data you are working with include missing values.
+This feature makes it harder to overlook the cases where you are dealing
+with missing data. You can add the argument <code>na.rm=TRUE</code> to
+calculate the result while ignoring the missing values.</p>
 <div class="codewrapper sourceCode" id="cb78">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1075,7 +1281,9 @@
 </h3>
 <pre class="output" tabindex="0"><code>[1] 7</code></pre>
 </div>
-<p>If your data include missing values, you may want to become familiar with the functions <code>is.na()</code>, <code>na.omit()</code>, and <code>complete.cases()</code>. See below for examples.</p>
+<p>If your data include missing values, you may want to become familiar
+with the functions <code>is.na()</code>, <code>na.omit()</code>, and
+<code>complete.cases()</code>. See below for examples.</p>
 <div class="codewrapper sourceCode" id="cb86">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1130,7 +1338,8 @@ attr(,"class")
 </h3>
 <pre class="output" tabindex="0"><code>[1] 2 1 1 7</code></pre>
 </div>
-<p>Recall that you can use the <code>typeof()</code> function to find the type of your atomic vector.</p>
+<p>Recall that you can use the <code>typeof()</code> function to find
+the type of your atomic vector.</p>
 <div id="challenge6" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1139,15 +1348,18 @@ attr(,"class")
 <h3 class="callout-title">Exercise<a class="anchor" aria-label="anchor" href="#challenge6"></a>
 </h3>
 <div class="callout-content">
-<ol style="list-style-type: decimal"><li>Using this vector of rooms, create a new vector with the NAs removed.</li>
+<ol style="list-style-type: decimal"><li>Using this vector of rooms, create a new vector with the NAs
+removed.</li>
 </ol><div class="codewrapper sourceCode" id="cb94">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">rooms</span> <span class="op">&lt;-</span> <span class="fu">c</span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="cn">NA</span>, <span class="fl">3</span>, <span class="fl">1</span>, <span class="fl">3</span>, <span class="fl">2</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">8</span>, <span class="fl">3</span>, <span class="fl">1</span>, <span class="cn">NA</span>, <span class="fl">1</span><span class="op">)</span></span></code></pre>
 </div>
-<ol start="2" style="list-style-type: decimal"><li><p>Use the function <code>median()</code> to calculate the median of the <code>rooms</code> vector.</p></li>
-<li><p>Use R to figure out how many households in the set use more than 2 rooms for sleeping.</p></li>
+<ol start="2" style="list-style-type: decimal"><li><p>Use the function <code>median()</code> to calculate the median of
+the <code>rooms</code> vector.</p></li>
+<li><p>Use R to figure out how many households in the set use more than
+2 rooms for sleeping.</p></li>
 </ol></div>
 </div>
 </div>
@@ -1158,7 +1370,7 @@ attr(,"class")
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb95">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1193,7 +1405,9 @@ attr(,"class")
 </div>
 </div>
 </div>
-<p>Now that we have learned how to write scripts, and the basics of R’s data structures, we are ready to start working with the SAFI dataset we have been using in the other lessons, and learn about data frames.</p>
+<p>Now that we have learned how to write scripts, and the basics of R’s
+data structures, we are ready to start working with the SAFI dataset we
+have been using in the other lessons, and learn about data frames.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1204,7 +1418,8 @@ attr(,"class")
 <div class="callout-content">
 <ul><li>Access individual values by location using <code>[]</code>.</li>
 <li>Access arbitrary sets of data using <code>[c(...)]</code>.</li>
-<li>Use logical operations and logical vectors to access subsets of data.</li>
+<li>Use logical operations and logical vectors to access subsets of
+data.</li>
 </ul></div>
 </div>
 </div>

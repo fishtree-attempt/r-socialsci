@@ -324,7 +324,8 @@
 <li>Use the jsonLite package to read a JSON file</li>
 <li>Display formatted JSON as dataframe</li>
 <li>Select and display nested dataframe fields from a JSON document</li>
-<li>Write tabular data from selected elements from a JSON document to a csv file</li>
+<li>Write tabular data from selected elements from a JSON document to a
+csv file</li>
 </ul></div>
 </div>
 </div>
@@ -332,23 +333,43 @@
 </div>
 <section id="the-json-data-format"><h2 class="section-heading">The JSON data format<a class="anchor" aria-label="anchor" href="#the-json-data-format"></a>
 </h2>
-<hr class="half-width"><p>The JSON data format was designed as a way of allowing different machines or processes within machines to communicate with each other by sending messages constructed in a well defined format. JSON is now the preferred data format used by APIs (Application Programming Interfaces).</p>
-<p>The JSON format although somewhat verbose is not only Human readable but it can also be mapped very easily to an R dataframe.</p>
-<p>We are going to read a file of data formatted as JSON, convert it into a dataframe in R then selectively create a csv file from the extracted data.</p>
-<p>The JSON file we are going to use is the <a href="data/SAFI.json">SAFI.json</a> file. This is the output file from an electronic survey system called ODK. The JSON represents the answers to a series of survey questions. The questions themselves have been replaced with unique Keys, the values are the answers.</p>
-<p>Because detailed surveys are by nature nested structures making it possible to record different levels of detail or selectively ask a set of specific questions based on the answer given to a previous question, the structure of the answers for the survey can not only be complex and convoluted, it could easily be different from one survey respondent’s set of answers to another.</p>
+<hr class="half-width"><p>The JSON data format was designed as a way of allowing different
+machines or processes within machines to communicate with each other by
+sending messages constructed in a well defined format. JSON is now the
+preferred data format used by APIs (Application Programming
+Interfaces).</p>
+<p>The JSON format although somewhat verbose is not only Human readable
+but it can also be mapped very easily to an R dataframe.</p>
+<p>We are going to read a file of data formatted as JSON, convert it
+into a dataframe in R then selectively create a csv file from the
+extracted data.</p>
+<p>The JSON file we are going to use is the <a href="data/SAFI.json">SAFI.json</a> file. This is the output file from
+an electronic survey system called ODK. The JSON represents the answers
+to a series of survey questions. The questions themselves have been
+replaced with unique Keys, the values are the answers.</p>
+<p>Because detailed surveys are by nature nested structures making it
+possible to record different levels of detail or selectively ask a set
+of specific questions based on the answer given to a previous question,
+the structure of the answers for the survey can not only be complex and
+convoluted, it could easily be different from one survey respondent’s
+set of answers to another.</p>
 <div class="section level3">
 <h3 id="advantages-of-json">Advantages of JSON<a class="anchor" aria-label="anchor" href="#advantages-of-json"></a></h3>
-<ul><li>Very popular data format for APIs (e.g. results from an Internet search)</li>
+<ul><li>Very popular data format for APIs (e.g. results from an Internet
+search)</li>
 <li>Human readable</li>
-<li>Each record (or document as they are called) is self contained. The equivalent of the column name and column values are in every record.</li>
-<li>Documents do not all have to have the same structure within the same file</li>
+<li>Each record (or document as they are called) is self contained. The
+equivalent of the column name and column values are in every
+record.</li>
+<li>Documents do not all have to have the same structure within the same
+file</li>
 <li>Document structures can be complex and nested</li>
 </ul></div>
 <div class="section level3">
 <h3 id="disadvantages-of-json">Disadvantages of JSON<a class="anchor" aria-label="anchor" href="#disadvantages-of-json"></a></h3>
 <ul><li>It is more verbose than the equivalent data in csv format</li>
-<li>Can be more difficult to process and display than csv formatted data</li>
+<li>Can be more difficult to process and display than csv formatted
+data</li>
 </ul></div>
 </section><section id="use-the-json-package-to-read-a-json-file"><h2 class="section-heading">Use the JSON package to read a JSON file<a class="anchor" aria-label="anchor" href="#use-the-json-package-to-read-a-json-file"></a>
 </h2>
@@ -360,18 +381,32 @@
 <span></span>
 <span><span class="va">json_data</span> <span class="op">&lt;-</span> <span class="fu">read_json</span><span class="op">(</span>path<span class="op">=</span><span class="st">'https://raw.githubusercontent.com/datacarpentry/r-socialsci/main/data/SAFI.json'</span><span class="op">)</span></span></code></pre>
 </div>
-<p>If you’ve already downloaded the data to your <code>data</code> directory, simply run</p>
+<p>If you’ve already downloaded the data to your <code>data</code>
+directory, simply run</p>
 <p>`{r eval=FALSE} json_data &lt;- read_json(path=‘data/SAFI.json’)</p>
 <p>````</p>
-<p>We can see that a new object called json_data has appeared in our Environment. It is described as a Large list (131 elements). In this current form, our data is messy. You can have a glimpse of it with the <code>head()</code> or <code>view()</code> functions. It will look not much more structured than if you were to open the JSON file with a text editor.</p>
-<p>This is because, by default, the <code>read_json()</code> function’s parameter <code>simplifyVector</code>, which specifies whether or not to simplify vectors is set to FALSE. This means that the default setting does not simplify nested lists into vectors and data frames. However, we can set this to TRUE, and our data will be read directly as a dataframe:</p>
+<p>We can see that a new object called json_data has appeared in our
+Environment. It is described as a Large list (131 elements). In this
+current form, our data is messy. You can have a glimpse of it with the
+<code>head()</code> or <code>view()</code> functions. It will look not
+much more structured than if you were to open the JSON file with a text
+editor.</p>
+<p>This is because, by default, the <code>read_json()</code> function’s
+parameter <code>simplifyVector</code>, which specifies whether or not to
+simplify vectors is set to FALSE. This means that the default setting
+does not simplify nested lists into vectors and data frames. However, we
+can set this to TRUE, and our data will be read directly as a
+dataframe:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">json_data</span> <span class="op">&lt;-</span> <span class="fu">read_json</span><span class="op">(</span>path<span class="op">=</span><span class="st">'data/SAFI.json'</span>, simplifyVector <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre>
 </div>
-<p>Now we can see we have this json data in a dataframe format. For consistency with the rest of the lesson, let’s coerce it to be a tibble and use <code>glimpse</code> to take a peek inside (these functions were loaded by <code><a href="https://tidyverse.tidyverse.org" class="external-link">library(tidyverse)</a></code>):</p>
+<p>Now we can see we have this json data in a dataframe format. For
+consistency with the rest of the lesson, let’s coerce it to be a tibble
+and use <code>glimpse</code> to take a peek inside (these functions were
+loaded by <code><a href="https://tidyverse.tidyverse.org" class="external-link">library(tidyverse)</a></code>):</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -459,8 +494,18 @@ $ F14_items_owned_other          &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA,
 $ F08_emply_lab                  &lt;chr&gt; "no", "yes", "no", "no", "no", "no", "n…
 $ `_members_count`               &lt;chr&gt; "3", "7", "10", "7", "7", "3", "6", "12…</code></pre>
 </div>
-<p>Looking good, but you might notice that actually we have a variable, <em>F_liv</em> that is a list of dataframes! It is very important to know what you are expecting from your data to be able to look for things like this. For example, if you are getting your JSON from an API, have a look at the API documentation, so you know what to look for.</p>
-<p>So what can we do about this column of dataframes? Well first things first, we can access each one. For example to access the dataframe in the first row, we can use the bracket (<code>[</code>) subsetting. Here we use single bracket, but you could also use double bracket (<code>[[</code>). The <code>[[</code> form allows only a single element to be selected using integer or character indices, whereas <code>[</code> allows indexing by vectors.</p>
+<p>Looking good, but you might notice that actually we have a variable,
+<em>F_liv</em> that is a list of dataframes! It is very important to
+know what you are expecting from your data to be able to look for things
+like this. For example, if you are getting your JSON from an API, have a
+look at the API documentation, so you know what to look for.</p>
+<p>So what can we do about this column of dataframes? Well first things
+first, we can access each one. For example to access the dataframe in
+the first row, we can use the bracket (<code>[</code>) subsetting. Here
+we use single bracket, but you could also use double bracket
+(<code>[[</code>). The <code>[[</code> form allows only a single element
+to be selected using integer or character indices, whereas
+<code>[</code> allows indexing by vectors.</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -474,7 +519,9 @@ $ `_members_count`               &lt;chr&gt; "3", "7", "10", "7", "7", "3", "6",
   F11_no_owned F_curr_liv
 1            1    poultry</code></pre>
 </div>
-<p>We can also choose to view the nested dataframes at all the rows of our main dataframe where a particular condition is met (for example where the value for the variable <em>C06_rooms</em> is equal to 4):</p>
+<p>We can also choose to view the nested dataframes at all the rows of
+our main dataframe where a particular condition is met (for example
+where the value for the variable <em>C06_rooms</em> is equal to 4):</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -512,14 +559,20 @@ data frame with 0 columns and 0 rows
 </div>
 </section><section id="write-the-json-file-to-csv"><h2 class="section-heading">Write the JSON file to csv<a class="anchor" aria-label="anchor" href="#write-the-json-file-to-csv"></a>
 </h2>
-<hr class="half-width"><p>If we try to write our json_data dataframe to a csv as we would usuall in a regular dataframe, we will get an error that tells us we have an “unimplemented type ‘list’ in ‘EncodeElement’”. This is because of the columns in our dataframes which are lists, or nested dataframes. You can try yourself:</p>
+<hr class="half-width"><p>If we try to write our json_data dataframe to a csv as we would
+usuall in a regular dataframe, we will get an error that tells us we
+have an “unimplemented type ‘list’ in ‘EncodeElement’”. This is because
+of the columns in our dataframes which are lists, or nested dataframes.
+You can try yourself:</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">write_csv</span><span class="op">(</span><span class="va">json_data</span>, file <span class="op">=</span> <span class="st">"SAFI_from_JSON.csv"</span><span class="op">)</span></span></code></pre>
 </div>
-<p>To write out as a csv, we will need to “flatten” these columns. One thing you can do to achieve this is to turn all of the columns of your dataframe to “character” types.</p>
+<p>To write out as a csv, we will need to “flatten” these columns. One
+thing you can do to achieve this is to turn all of the columns of your
+dataframe to “character” types.</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -534,8 +587,13 @@ data frame with 0 columns and 0 rows
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">write_csv</span><span class="op">(</span><span class="va">flattened_json_data</span>, file <span class="op">=</span> <span class="st">"data_output/SAFI_from_JSON.csv"</span><span class="op">)</span></span></code></pre>
 </div>
-<p>Note: this means that when you read this csv back into R, the column of the nested dataframes will now be read in as a character vector. Converting it back to list to extract elements might be complicated, so it is probably better to keep storing these data in a JSON format if you will have to do this.</p>
-<p>You can also write out the individual nested dataframes to a csv. For example:</p>
+<p>Note: this means that when you read this csv back into R, the column
+of the nested dataframes will now be read in as a character vector.
+Converting it back to list to extract elements might be complicated, so
+it is probably better to keep storing these data in a JSON format if you
+will have to do this.</p>
+<p>You can also write out the individual nested dataframes to a csv. For
+example:</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -550,9 +608,12 @@ data frame with 0 columns and 0 rows
 <h3 class="callout-title">Keypoints<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
 </h3>
 <div class="callout-content">
-<ul><li>JSON is a popular data format for transferring data used by a great many Web based APIs</li>
-<li>The complex structure of a JSON document means that it cannot easily be ‘flattened’ into tabular data</li>
-<li>We can use R code to extract values of interest and place them in a csv file</li>
+<ul><li>JSON is a popular data format for transferring data used by a great
+many Web based APIs</li>
+<li>The complex structure of a JSON document means that it cannot easily
+be ‘flattened’ into tabular data</li>
+<li>We can use R code to extract values of interest and place them in a
+csv file</li>
 </ul></div>
 </div>
 </div>

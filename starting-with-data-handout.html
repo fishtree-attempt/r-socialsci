@@ -287,12 +287,17 @@
 
         
 
-<p>This document contains all of the functions that were covered in the <em>Introduction to R</em> workshop. Each function is presented alongside an example of how it can be used.</p>
-<p>All of the examples below are in the context of the Palmer Penguins, found <a href="https://allisonhorst.github.io/palmerpenguins/index.html" class="external-link">here (link)</a>.</p>
+<p>This document contains all of the functions that were covered in the
+<em>Introduction to R</em> workshop. Each function is presented
+alongside an example of how it can be used.</p>
+<p>All of the examples below are in the context of the Palmer Penguins,
+found <a href="https://allisonhorst.github.io/palmerpenguins/index.html" class="external-link">here
+(link)</a>.</p>
 <section id="packages"><h2 class="section-heading">Packages<a class="anchor" aria-label="anchor" href="#packages"></a>
 </h2>
 <hr class="half-width"><ul><li>
-<code>library()</code> – loads packages into your <code>R</code> session</li>
+<code>library()</code> – loads packages into your <code>R</code>
+session</li>
 </ul><div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -304,8 +309,10 @@
 </h2>
 <hr class="half-width"><ul><li>
 <code>read_csv()</code> – function to import a csv file.
-<ul><li>First argument is the path to the data, passed as a character (inside quotations).</li>
-<li>You can specify what values should be considered missing, using the <code>na</code> argument.</li>
+<ul><li>First argument is the path to the data, passed as a character
+(inside quotations).</li>
+<li>You can specify what values should be considered missing, using the
+<code>na</code> argument.</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -316,7 +323,9 @@
 </section><section id="inspecting-data"><h2 class="section-heading">Inspecting Data<a class="anchor" aria-label="anchor" href="#inspecting-data"></a>
 </h2>
 <hr class="half-width"><ul><li>
-<code>dim()</code> - returns a vector with the number of rows as the first element, and the number of columns as the second element (the <strong>dim</strong>ensions of the object)</li>
+<code>dim()</code> - returns a vector with the number of rows as the
+first element, and the number of columns as the second element (the
+<strong>dim</strong>ensions of the object)</li>
 </ul><div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -335,7 +344,8 @@
 <span><span class="fu">ncol</span><span class="op">(</span><span class="va">penguins</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>head()</code> - displays the first 6 rows of the dataframe</li>
+<code>head()</code> - displays the first 6 rows of the
+dataframe</li>
 <li>
 <code>tail()</code> - displays the last 6 rows of the dataframe</li>
 </ul><div class="codewrapper sourceCode" id="cb5">
@@ -346,9 +356,11 @@
 <span><span class="fu">tail</span><span class="op">(</span><span class="va">penguins</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>names()</code> - returns the all of the names of an object (both row and column)</li>
+<code>names()</code> - returns the all of the names of an object
+(both row and column)</li>
 <li>
-<code>colnames()</code> - returns column names for dataframes (without row names)</li>
+<code>colnames()</code> - returns column names for dataframes
+(without row names)</li>
 </ul><div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -357,7 +369,9 @@
 <span><span class="fu">colnames</span><span class="op">(</span><span class="va">penguins</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>glimpse()</code> - provides a preview of the data, where column names are presented with their associated data types, and the entries from each column are printed in each row</li>
+<code>glimpse()</code> - provides a preview of the data, where
+column names are presented with their associated data types, and the
+entries from each column are printed in each row</li>
 </ul><div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -365,7 +379,9 @@
 <code class="sourceCode R"><span><span class="fu">glimpse</span><span class="op">(</span><span class="va">penguins</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>str()</code> - returns the structure of the object and information about the class, the names and data types of each column, and a preview of the first entries of each column</li>
+<code>str()</code> - returns the structure of the object and
+information about the class, the names and data types of each column,
+and a preview of the first entries of each column</li>
 </ul><div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -374,7 +390,9 @@
 </div>
 <ul><li>
 <code>summary()</code> - provides summary statistics for each column
-<ul><li>Note: summary statistics for character variables are not meaningful, as they simply state the number of observations (length) of the variable</li>
+<ul><li>Note: summary statistics for character variables are not meaningful,
+as they simply state the number of observations (length) of the
+variable</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -386,7 +404,8 @@
 </h2>
 <hr class="half-width"><ul><li>
 <code>[]</code> – selects rows and columns from a dataframe
-<ul><li>The first entry is the row number, the second entry is the column number(s), and they are separated with a comma.</li>
+<ul><li>The first entry is the row number, the second entry is the column
+number(s), and they are separated with a comma.</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -403,7 +422,8 @@
 </div>
 <ul><li>
 <code>[[]]</code> – selects a column from a dataframe
-<ul><li>Inside the brackets you can pass either the number of the column or the name of the column (in quotations)</li>
+<ul><li>Inside the brackets you can pass either the number of the column or
+the name of the column (in quotations)</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -414,7 +434,9 @@
 <span><span class="va">penguins</span><span class="op">[[</span><span class="st">"island"</span><span class="op">]</span><span class="op">]</span></span></code></pre>
 </div>
 <ul><li>
-<code>$</code> – selects a column from a dataframe, where the name of the dataframe is on the left and the name of the column is on the right</li>
+<code>$</code> – selects a column from a dataframe, where the name
+of the dataframe is on the left and the name of the column is on the
+right</li>
 </ul><div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -424,9 +446,15 @@
 </section><section id="working-with-different-data-types"><h2 class="section-heading">Working with Different Data Types<a class="anchor" aria-label="anchor" href="#working-with-different-data-types"></a>
 </h2>
 <hr class="half-width"><ul><li>
-<code>factor()</code> – creates a categorical variable from a character or numeric variable, variable has a factor datatype
-<ul><li>the values (level) of the factor levels is specified in the <code>levels</code> argument, where the levels must be specified in a vector (using <code>c()</code>)</li>
-<li>Note: the order you wish for the levels to appear is how you should list them in the <code>levels</code> argument, you can also specify <code>ordered = TRUE</code> to ensure the levels remain in this order</li>
+<code>factor()</code> – creates a categorical variable from a
+character or numeric variable, variable has a factor datatype
+<ul><li>the values (level) of the factor levels is specified in the
+<code>levels</code> argument, where the levels must be specified in a
+vector (using <code>c()</code>)</li>
+<li>Note: the order you wish for the levels to appear is how you should
+list them in the <code>levels</code> argument, you can also specify
+<code>ordered = TRUE</code> to ensure the levels remain in this
+order</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -437,7 +465,8 @@
 <span>                            ordered <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>as.factor()</code> – creates a categorical variable from a character or numeric variable, variable has a factor datatype
+<code>as.factor()</code> – creates a categorical variable from a
+character or numeric variable, variable has a factor datatype
 <ul><li>does not allow for you to specify the order of the levels</li>
 <li>defaults to alphabetical ordering for factor levels</li>
 </ul></li>
@@ -448,7 +477,8 @@
 <code class="sourceCode R"><span><span class="va">penguins</span><span class="op">$</span><span class="va">year_fct</span> <span class="op">&lt;-</span> <span class="fu">as.factor</span><span class="op">(</span><span class="va">penguins</span><span class="op">$</span><span class="va">year</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>levels()</code> – returns the levels of a variable with a factor datatype, in the order they were stored
+<code>levels()</code> – returns the levels of a variable with a
+factor datatype, in the order they were stored
 <ul><li>Note: this function will not work for character datatypes</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb15">
@@ -458,7 +488,8 @@
 <code class="sourceCode R"><span><span class="fu">levels</span><span class="op">(</span><span class="va">penguins</span><span class="op">$</span><span class="va">year_fct</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>nlevels()</code> – returns the number of levels of a variable with a factor datatype
+<code>nlevels()</code> – returns the number of levels of a variable
+with a factor datatype
 <ul><li>Note: this function will not work for character datatypes</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb16">
@@ -468,7 +499,8 @@
 <code class="sourceCode R"><span><span class="fu">nlevels</span><span class="op">(</span><span class="va">penguins</span><span class="op">$</span><span class="va">year_fct</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>as.character()</code> – creates a character variable from a numeric or factor variable</li>
+<code>as.character()</code> – creates a character variable from a
+numeric or factor variable</li>
 </ul><div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -476,9 +508,13 @@
 <code class="sourceCode R"><span><span class="va">penguins</span><span class="op">$</span><span class="va">species_chr</span> <span class="op">&lt;-</span> <span class="fu">as.character</span><span class="op">(</span><span class="va">penguins</span><span class="op">$</span><span class="va">species</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>ymd()</code> – transforms dates stored as character or numeric variables to dates
-<ul><li>Note: to use this function, dates must be stored in year-month-day format</li>
-<li>The function does well with heterogeneous formats (as seen below), but formats where some of the entries are not in double digits may not be parsed correctly.</li>
+<code>ymd()</code> – transforms dates stored as character or numeric
+variables to dates
+<ul><li>Note: to use this function, dates must be stored in year-month-day
+format</li>
+<li>The function does well with heterogeneous formats (as seen below),
+but formats where some of the entries are not in double digits may not
+be parsed correctly.</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -488,7 +524,8 @@
 <span><span class="fu">ymd</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>day()</code> – extracts the day (number) of a date variable</li>
+<code>day()</code> – extracts the day (number) of a date
+variable</li>
 </ul><div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -496,7 +533,8 @@
 <code class="sourceCode R"><span><span class="fu">day</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>month()</code> – extracts the month (number) of a date variable</li>
+<code>month()</code> – extracts the month (number) of a date
+variable</li>
 </ul><div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -515,7 +553,8 @@
 </h2>
 <hr class="half-width"><ul><li>
 <code>plot()</code> – a generic function for plotting R objects
-<ul><li>In this lesson <code>plot()</code> was used to create bargraphs of categorical variables.</li>
+<ul><li>In this lesson <code>plot()</code> was used to create bargraphs of
+categorical variables.</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>

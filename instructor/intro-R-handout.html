@@ -288,11 +288,14 @@
 
         
 
-<p>This document contains all of the functions that were covered in the <em>Introduction to R</em> workshop. Each function is presented alongside an example of how it can be used.</p>
+<p>This document contains all of the functions that were covered in the
+<em>Introduction to R</em> workshop. Each function is presented
+alongside an example of how it can be used.</p>
 <section id="creating-objects"><h2 class="section-heading">Creating Objects<a class="anchor" aria-label="anchor" href="#creating-objects"></a>
 </h2>
 <hr class="half-width"><ul><li>
-<code>&lt;-</code> – “assignment arrow”, assigns a value (vector, dataframe, single value) to the name of a variable</li>
+<code>&lt;-</code> – “assignment arrow”, assigns a value (vector,
+dataframe, single value) to the name of a variable</li>
 </ul><div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -302,7 +305,8 @@
 <span><span class="va">z</span> <span class="op">&lt;-</span> <span class="va">x</span> <span class="op">+</span> <span class="va">y</span></span></code></pre>
 </div>
 <ul><li>
-<code>c()</code> – the “concatenate” function combines inputs to form a vector, the values have to be the same data type.</li>
+<code>c()</code> – the “concatenate” function combines inputs to
+form a vector, the values have to be the same data type.</li>
 </ul><div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -314,7 +318,8 @@
 </section><section id="inspecting-objects"><h2 class="section-heading">Inspecting Objects<a class="anchor" aria-label="anchor" href="#inspecting-objects"></a>
 </h2>
 <hr class="half-width"><ul><li>
-<code>str()</code> – compact display of the structure of an R object</li>
+<code>str()</code> – compact display of the structure of an R
+object</li>
 </ul><div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -322,7 +327,8 @@
 <code class="sourceCode R"><span><span class="fu">str</span><span class="op">(</span><span class="va">animals</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>class()</code> – returns the type of element of any R object</li>
+<code>class()</code> – returns the type of element of any R
+object</li>
 </ul><div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -330,7 +336,8 @@
 <code class="sourceCode R"><span><span class="fu">class</span><span class="op">(</span><span class="va">logicals</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>typeof()</code> – returns the data type or storage mode of any R object</li>
+<code>typeof()</code> – returns the data type or storage mode of any
+R object</li>
 </ul><div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -348,7 +355,8 @@
 <code class="sourceCode R"><span><span class="fu">args</span><span class="op">(</span><span class="va">round</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>named arguments – the name of the argument the function expects
-<ul><li>You can choose to not name your arguments, <strong>if</strong> you know the <strong>exact</strong> order they should be in!</li>
+<ul><li>You can choose to not name your arguments, <strong>if</strong> you
+know the <strong>exact</strong> order they should be in!</li>
 <li>However, we generally discourage this.</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb7">
@@ -365,7 +373,8 @@
 </section><section id="functions-to-summarize-data"><h2 class="section-heading">Functions to Summarize Data<a class="anchor" aria-label="anchor" href="#functions-to-summarize-data"></a>
 </h2>
 <hr class="half-width"><ul><li>
-<code>sqrt()</code> – returns the square root of a numeric variable</li>
+<code>sqrt()</code> – returns the square root of a numeric
+variable</li>
 </ul><div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -374,7 +383,8 @@
 </div>
 <ul><li>
 <code>mean()</code> – returns the mean of a numeric variable
-<ul><li>You can add the <code>na.rm</code> argument, to remove <code>NA</code> values before calculating the mean.</li>
+<ul><li>You can add the <code>na.rm</code> argument, to remove
+<code>NA</code> values before calculating the mean.</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -384,7 +394,8 @@
 </div>
 <ul><li>
 <code>max()</code> – returns the maximum of a numeric variable
-<ul><li>You can add the <code>na.rm</code> argument, to remove <code>NA</code> values before calculating the max.</li>
+<ul><li>You can add the <code>na.rm</code> argument, to remove
+<code>NA</code> values before calculating the max.</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -394,7 +405,8 @@
 </div>
 <ul><li>
 <code>sum()</code> – returns the sum of a numeric variable
-<ul><li>You can add the <code>na.rm</code> argument, to remove <code>NA</code> values before calculating the sum.</li>
+<ul><li>You can add the <code>na.rm</code> argument, to remove
+<code>NA</code> values before calculating the sum.</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -403,7 +415,8 @@
 <code class="sourceCode R"><span><span class="fu">sqrt</span><span class="op">(</span><span class="va">numbers</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>length()</code> – returns the length of a vector (of any datatype)</li>
+<code>length()</code> – returns the length of a vector (of any
+datatype)</li>
 </ul><div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -427,15 +440,19 @@
 <span><span class="va">animals</span><span class="op">[</span><span class="fu">c</span><span class="op">(</span><span class="fl">1</span>, <span class="fl">3</span><span class="op">)</span><span class="op">]</span></span>
 <span><span class="co">## selects the first and third element</span></span></code></pre>
 </div>
-<ul><li>relational operators – return logical values indicating where a relation is satisfied. The most commonly used logical operators for data analysis are as follows:
+<ul><li>relational operators – return logical values indicating where a
+relation is satisfied. The most commonly used logical operators for data
+analysis are as follows:
 <ul><li>
 <code>==</code> means “equal to”</li>
 <li>
 <code>!=</code> means “not equal to”</li>
 <li>
-<code>&gt;</code> or <code>&lt;</code> means “greater than” or “less than”</li>
+<code>&gt;</code> or <code>&lt;</code> means “greater than” or “less
+than”</li>
 <li>
-<code>&gt;=</code> or <code>&lt;=</code> means “greater than or equal to” or “less than or equal to”</li>
+<code>&gt;=</code> or <code>&lt;=</code> means “greater than or
+equal to” or “less than or equal to”</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -451,9 +468,11 @@
 </div>
 <ul><li>logical operators – join subset criteria together
 <ul><li>
-<code>&amp;</code> means “and” – where two criteria must <strong>both</strong> be satisfied</li>
+<code>&amp;</code> means “and” – where two criteria must
+<strong>both</strong> be satisfied</li>
 <li>
-<code>|</code> means “or” – where at least one criteria must be satisfied</li>
+<code>|</code> means “or” – where at least one criteria must be
+satisfied</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -464,8 +483,11 @@
 <span><span class="va">animals</span> <span class="op">==</span> <span class="st">"dog"</span> <span class="op">|</span> <span class="va">animals</span> <span class="op">==</span> <span class="st">"cat"</span></span></code></pre>
 </div>
 <ul><li>
-<code>%in%</code> – the “inclusion operator”, allows you to test if any of the elements of a search vector (on the left hand side) are found in the target vector (on the right hand side).
-<ul><li>The levels of the target vector must be included in a vector (<code>c()</code>).</li>
+<code>%in%</code> – the “inclusion operator”, allows you to test if
+any of the elements of a search vector (on the left hand side) are found
+in the target vector (on the right hand side).
+<ul><li>The levels of the target vector must be included in a vector
+(<code>c()</code>).</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -478,8 +500,11 @@
 </section><section id="missing-data"><h2 class="section-heading">Missing Data<a class="anchor" aria-label="anchor" href="#missing-data"></a>
 </h2>
 <hr class="half-width"><ul><li>
-<code>is.na()</code> – returns a vector of logical values indicating which elements of a vector have <code>NA</code> values
-<ul><li>Often combined with <code>!</code>, where the <code>!</code> negates the previous statement (e.g. <code>!TRUE</code> is equal to <code>FALSE</code>).</li>
+<code>is.na()</code> – returns a vector of logical values indicating
+which elements of a vector have <code>NA</code> values
+<ul><li>Often combined with <code>!</code>, where the <code>!</code> negates
+the previous statement (e.g. <code>!TRUE</code> is equal to
+<code>FALSE</code>).</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -492,7 +517,8 @@
 <span><span class="op">!</span><span class="fu">is.na</span><span class="op">(</span><span class="va">missing</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>na.omit()</code> – removes the observations with <code>NA</code> values</li>
+<code>na.omit()</code> – removes the observations with
+<code>NA</code> values</li>
 </ul><div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -500,7 +526,9 @@
 <code class="sourceCode R"><span><span class="fu">na.omit</span><span class="op">(</span><span class="va">missing</span><span class="op">)</span></span></code></pre>
 </div>
 <ul><li>
-<code>complete.cases()</code> – returns a vector of logical values indicating which elements of a vector <strong>are not</strong> missing (<code>NA</code>) values</li>
+<code>complete.cases()</code> – returns a vector of logical values
+indicating which elements of a vector <strong>are not</strong> missing
+(<code>NA</code>) values</li>
 </ul><div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
