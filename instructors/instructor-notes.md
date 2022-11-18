@@ -86,13 +86,19 @@ The two main goals for this lessons are:
   exposed to it. The content of the lesson should be enough for learners to
   avoid common mistakes with them.
 
-### Data wrangling with dplyr and tidyr
+### Data wrangling with dplyr
 
 - This lesson works better if you have graphics demonstrating dplyr commands.
   You can modify [this Google Slides deck](https://docs.google.com/presentation/d/1A9abypFdFp8urAe9z7GCMjFr4aPeIb8mZAtJA2F7H0w/edit#slide=id.g652714585f_0_114) and use it for your workshop.
 - For this lesson make sure that learners are comfortable using pipes.
 - There is also sometimes some confusion on what the arguments of `group_by`
   should be, and when to use `filter()` and `select()`.
+
+### Data wrangling with tidyr
+
+- The dplyr and tidyr episode was recently split up into two separate episodes to try to make the information about these two important packages more digestible.
+- There is some rather advanced topics in this episode, but it is really useful for learners to become familiar with some ways to deal with data that is not in a format they want.
+- This episode is also important in that it produces the `interviews_plotting` tibble that is used in the next episode on ggplot2.
 - If the code that generates the output for the table `interviews_plotting` (which is used in the following episode) causes the following error:
 
 > Error: Can't rename columns that don't exist.  
