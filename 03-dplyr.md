@@ -842,6 +842,10 @@ library(lubridate) # load lubridate if not already loaded
 ```
 
 ```{.output}
+Loading required package: timechange
+```
+
+```{.output}
 
 Attaching package: 'lubridate'
 ```

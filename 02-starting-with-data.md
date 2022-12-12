@@ -940,7 +940,7 @@ as_date(char_dates, format = "%m/%d/%y")
 ```
 
 ```{.output}
-[1] "2020-07-31" "2020-08-09" "2020-04-30"
+[1] "2012-07-31" "2014-08-09" "2016-04-30"
 ```
 
 Here, the `%y` part of the format stands for a two-digit year instead of a
@@ -954,8 +954,12 @@ elements of the format are switched.
 as_date(char_dates, format = "%d/%m/%y")
 ```
 
+```{.warning}
+Warning: 2 failed to parse.
+```
+
 ```{.output}
-[1] NA           "2020-09-08" NA          
+[1] NA           "2014-09-08" NA          
 ```
 
 Since there is no month numbered 30 or 31, the first and third dates cannot be
