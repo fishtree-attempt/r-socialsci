@@ -26,5 +26,6 @@
 "learners/starting-with-data-handout.Rmd" "b7deeaa71b74f89ae011c8159e77b36a" "site/built/starting-with-data-handout.md" "2023-01-05"
 "learners/data-wrangling-handout.Rmd" "03ecc7a97f4207b7bc80c78ecbcfcb69" "site/built/data-wrangling-handout.md" "2023-01-05"
 "learners/data-visualisation-handout.Rmd" "af73107d4c87c96857e7d1a803f12013" "site/built/data-visualisation-handout.md" "2023-01-05"
+"learners/setup.md" "e45a6fadce9fd5bc3613770539c12ece" "site/built/setup.md" "2023-01-31"
 "profiles/learner-profiles.md" "60b93493cf1da06dfd63255d73854461" "site/built/learner-profiles.md" "2023-01-05"
 "renv/profiles/lesson-requirements/renv.lock" "ccad40691f34fb2c2446e4711b1a4d3b" "site/built/renv.lock" "2023-01-05"
